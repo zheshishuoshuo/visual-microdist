@@ -5,6 +5,10 @@ from scipy import special
 from scipy.optimize import minimize
 
 
+EPS = 1e-12
+EXP_CLIP = 50.0
+
+
 
 # ========= 基础工具 =========
 
@@ -32,15 +36,26 @@ def lognormal_pdf(mu, m_ln, s_ln):
     mu = np.asarray(mu, float)
     mask = (mu > 0) & np.isfinite(mu)
     out = np.zeros_like(mu, dtype=float)
-    z = (np.log(mu[mask]) - m_ln) / s_ln
-    out[mask] = np.exp(-0.5*z*z) / (mu[mask] * s_ln * np.sqrt(2*np.pi))
+    if not np.any(mask):
+        return out
+    mu_safe = np.clip(mu[mask], EPS, None)
+    s_ln_safe = np.maximum(s_ln, EPS)
+    z = (np.log(mu_safe) - m_ln) / s_ln_safe
+    z = np.clip(z, -EXP_CLIP, EXP_CLIP)
+    denom = np.maximum(mu_safe * s_ln_safe * np.sqrt(2 * np.pi), EPS)
+    out[mask] = np.exp(-0.5 * z * z) / denom
     return out
 
 def lognormal_cdf(mu, m_ln, s_ln):
     mu = np.asarray(mu, float)
     mask = (mu > 0) & np.isfinite(mu)
     out = np.zeros_like(mu, dtype=float)
-    z = (np.log(mu[mask]) - m_ln) / s_ln
+    if not np.any(mask):
+        return out
+    mu_safe = np.clip(mu[mask], EPS, None)
+    s_ln_safe = np.maximum(s_ln, EPS)
+    z = (np.log(mu_safe) - m_ln) / s_ln_safe
+    z = np.clip(z, -EXP_CLIP, EXP_CLIP)
     out[mask] = _norm_cdf(z)
     return out
 
@@ -49,9 +64,10 @@ def pareto_pdf(mu, alpha, mu0):
     mu = np.asarray(mu, float)
     out = np.zeros_like(mu, dtype=float)
     m = (mu >= mu0) & np.isfinite(mu)
-    if alpha <= 1:
+    if alpha <= 1 or not np.any(m):
         return out
-    out[m] = (alpha - 1.0) * (mu0**(alpha - 1.0)) * (mu[m]**(-alpha))
+    mu_safe = np.clip(mu[m], EPS, None)
+    out[m] = (alpha - 1.0) * (mu0 ** (alpha - 1.0)) * (mu_safe ** (-alpha))
     return out
 
 # ========= 拟合：Lognormal（μ≤μ0） + Pareto（μ≥μ0） =========
@@ -61,31 +77,37 @@ def fit_lognorm_bulk(mu, cnt, mu0):
        mass_bulk = 主体权重（计数占比），Z_bulk = 截断归一化因子 Φ=P(μ≤μ0)
     """
     mu = np.asarray(mu, float); cnt = np.asarray(cnt, float)
-    m = (mu > 0) & (mu <= mu0) & (cnt > 0)
+    ok = np.isfinite(mu) & np.isfinite(cnt)
+    m = (mu > 0) & (mu <= mu0) & (cnt > 0) & ok
     if m.sum() < 3:
         return None
     w = cnt[m]
-    x = np.log(mu[m])
-    m_ln = (w * x).sum() / w.sum()
-    s2 = (w * (x - m_ln)**2).sum() / w.sum()
-    s_ln = np.sqrt(max(s2, 1e-12))
+    x = np.log(np.clip(mu[m], EPS, None))
+    wsum = np.maximum(w.sum(), EPS)
+    m_ln = (w * x).sum() / wsum
+    s2 = (w * (x - m_ln) ** 2).sum() / wsum
+    s_ln = np.sqrt(max(s2, EPS))
     # 截断因子（Φ = P[μ<=μ0]）
     Z = float(lognormal_cdf(np.array([mu0]), m_ln, s_ln)[0])
-    mass_bulk = float(cnt[m].sum() / cnt.sum())
+    total = cnt[(cnt > 0) & ok & (mu > 0)].sum()
+    mass_bulk = float(w.sum() / np.maximum(total, EPS))
     return m_ln, s_ln, mass_bulk, Z
 
 def fit_pareto_tail(mu, cnt, mu0):
     """对 μ≥μ0 的尾部用加权 Hill 估计：alpha = 1 + W / sum(w*ln(mu/mu0))"""
     mu = np.asarray(mu, float); cnt = np.asarray(cnt, float)
-    m = (mu >= mu0) & (cnt > 0)
+    ok = np.isfinite(mu) & np.isfinite(cnt)
+    m = (mu >= mu0) & (cnt > 0) & ok
     if m.sum() < 2:
         return None
     w = cnt[m]
-    denom = (w * np.log(mu[m] / mu0)).sum()
+    log_term = np.log(np.clip(mu[m] / mu0, EPS, None))
+    denom = (w * log_term).sum()
     if denom <= 0:
         return None
-    alpha = 1.0 + w.sum() / denom
-    mass_tail = float(w.sum() / cnt.sum())
+    alpha = 1.0 + w.sum() / np.maximum(denom, EPS)
+    total = cnt[(cnt > 0) & ok & (mu > 0)].sum()
+    mass_tail = float(w.sum() / np.maximum(total, EPS))
     return alpha, mass_tail
 
 def build_piecewise_pdf(mu_grid, mu0, m_ln, s_ln, alpha, mass_bulk, mass_tail, Z_bulk):
@@ -95,7 +117,7 @@ def build_piecewise_pdf(mu_grid, mu0, m_ln, s_ln, alpha, mass_bulk, mass_tail, Z
     right = ~left
     if left.any():
         f = lognormal_pdf(mu_grid[left], m_ln, s_ln)
-        f = f / max(Z_bulk, 1e-12)
+        f = f / np.maximum(Z_bulk, EPS)
         pdf[left] = (1.0 - mass_tail) * f
     if right.any():
         pdf[right] = mass_tail * pareto_pdf(mu_grid[right], alpha, mu0)
@@ -122,7 +144,7 @@ def predict_counts_curve(mu_grid, pdf, total_count, bin_widths=None):
 def fit_and_predict(mu, cnt, pct=95.0, grid_points=2000, bin_width=None):
     mu = np.asarray(mu, float)
     cnt = np.asarray(cnt, float)
-    ok = np.isfinite(mu) & np.isfinite(cnt) & (cnt >= 0)
+    ok = np.isfinite(mu) & np.isfinite(cnt) & (mu > 0) & (cnt > 0)
     mu, cnt = mu[ok], cnt[ok]
     if mu.size < 8 or cnt.sum() <= 0:
         return None
@@ -130,7 +152,7 @@ def fit_and_predict(mu, cnt, pct=95.0, grid_points=2000, bin_width=None):
     if bin_width is None:
         bin_width = np.median(np.diff(mu))
 
-    mu0 = weighted_quantile(mu, cnt, pct/100.0)
+    mu0 = weighted_quantile(mu, cnt, pct / 100.0)
     if not np.isfinite(mu0):
         return None
 
@@ -142,22 +164,23 @@ def fit_and_predict(mu, cnt, pct=95.0, grid_points=2000, bin_width=None):
     m_ln, s_ln, mass_bulk, Z = bulk
     alpha, mass_tail = tail
 
+    N = np.maximum(cnt.sum(), EPS)
     mu_grid = np.linspace(mu.min(), mu.max(), grid_points)
     pdf_mix = build_piecewise_pdf(mu_grid, mu0, m_ln, s_ln, alpha, mass_tail, mass_tail, Z)
-    y_mix = predict_counts_curve(mu_grid, pdf_mix, cnt.sum(), bin_width)
+    y_mix = predict_counts_curve(mu_grid, pdf_mix, N, bin_width)
 
     pdf_bulk = np.zeros_like(mu_grid)
     pdf_tail = np.zeros_like(mu_grid)
     left = mu_grid <= mu0
     right = ~left
     if left.any():
-        f = lognormal_pdf(mu_grid[left], m_ln, s_ln) / max(Z, 1e-12)
+        f = lognormal_pdf(mu_grid[left], m_ln, s_ln) / np.maximum(Z, EPS)
         pdf_bulk[left] = (1.0 - mass_tail) * f
     if right.any():
         pdf_tail[right] = mass_tail * pareto_pdf(mu_grid[right], alpha, mu0)
 
-    y_bulk = predict_counts_curve(mu_grid, pdf_bulk, cnt.sum(), bin_width)
-    y_tail = predict_counts_curve(mu_grid, pdf_tail, cnt.sum(), bin_width)
+    y_bulk = predict_counts_curve(mu_grid, pdf_bulk, N, bin_width)
+    y_tail = predict_counts_curve(mu_grid, pdf_tail, N, bin_width)
 
     return dict(
         curves={
@@ -194,48 +217,69 @@ def fit_additive_lognorm_pareto_counts(mu, cnt, bin_widths, pct_for_mu_min=95.0)
            params={'w':..., 'm_ln':..., 's_ln':..., 'alpha':..., 'mu_min':...})
       或 None（拟合失败）
     """
-    mu   = np.asarray(mu, float)
-    cnt  = np.asarray(cnt, float)
-    bw   = np.asarray(bin_widths, float)
-    ok = np.isfinite(mu) & np.isfinite(cnt) & np.isfinite(bw) & (bw > 0)
+    mu = np.asarray(mu, float)
+    cnt = np.asarray(cnt, float)
+    bw = np.asarray(bin_widths, float)
+    ok = (
+        np.isfinite(mu)
+        & np.isfinite(cnt)
+        & np.isfinite(bw)
+        & (bw > 0)
+        & (mu > 0)
+        & (cnt > 0)
+    )
     mu, cnt, bw = mu[ok], cnt[ok], bw[ok]
     if mu.size < 8 or cnt.sum() <= 0:
         return None
 
-    N = float(cnt.sum())
+    N = float(np.maximum(cnt.sum(), EPS))
     # μ_min 用加权分位数初始化（也可让用户通过滑条控制）
     mu_min0 = max(1e-6, weighted_quantile(mu, cnt, pct_for_mu_min/100.0))
     # 初值：先用未截断 LN 的矩来初始化 m, s；w 初始化为尾部质量占比；alpha 给个温和初值
-    x = np.log(np.clip(mu, 1e-12, None))
+    x = np.log(np.clip(mu, EPS, None))
     wts = cnt
-    m0 = (wts * x).sum() / wts.sum()
-    s0 = np.sqrt(max((wts * (x - m0)**2).sum() / wts.sum(), 1e-3))
-    w0 = min(0.4, float((cnt[mu >= mu_min0].sum() / N)))   # 初始尾部权重
+    wsum = np.maximum(wts.sum(), EPS)
+    m0 = (wts * x).sum() / wsum
+    s0 = np.sqrt(max((wts * (x - m0) ** 2).sum() / wsum, 1e-3))
+    w0 = min(0.4, float(cnt[mu >= mu_min0].sum() / N))   # 初始尾部权重
     a0 = 3.0
 
     # 变量向量：theta = [logit(w), m_ln, log(s_ln), log(alpha-1), log(mu_min - mu_lo)]
     mu_lo = float(np.min(mu))
+
     def pack(w, m_ln, s_ln, alpha, mu_min):
-        z0 = np.log(w/(1-w + 1e-12) + 1e-12)
-        return np.array([z0, m_ln, np.log(s_ln), np.log(alpha-1.0), np.log(mu_min - mu_lo + 1e-9)], float)
+        w = np.clip(w, EPS, 1 - EPS)
+        z0 = np.log(w / np.maximum(1 - w, EPS))
+        return np.array(
+            [
+                z0,
+                m_ln,
+                np.log(np.maximum(s_ln, EPS)),
+                np.log(np.maximum(alpha - 1.0, EPS)),
+                np.log(np.maximum(mu_min - mu_lo, 1e-9)),
+            ],
+            float,
+        )
+
     def unpack(th):
         z0, m_ln, ls, la1, lmm = th
-        w = 1.0/(1.0 + np.exp(-z0))       # (0,1)
-        s_ln = np.exp(ls)                 # >0
-        alpha = 1.0 + np.exp(la1)         # >1
-        mu_min = mu_lo + np.exp(lmm)      # >= mu_lo
+        z0 = np.clip(z0, -EXP_CLIP, EXP_CLIP)
+        w = 1.0 / (1.0 + np.exp(-z0))       # (0,1)
+        w = np.clip(w, EPS, 1 - EPS)
+        s_ln = np.exp(np.clip(ls, -EXP_CLIP, EXP_CLIP))
+        s_ln = np.maximum(s_ln, EPS)
+        alpha = 1.0 + np.exp(np.clip(la1, -EXP_CLIP, EXP_CLIP))
+        mu_min = mu_lo + np.exp(np.clip(lmm, -EXP_CLIP, EXP_CLIP))
         return w, m_ln, s_ln, alpha, mu_min
 
     def nll(th):
         w, m_ln, s_ln, alpha, mu_min = unpack(th)
-        # pdf
         ln_pdf = lognormal_pdf(mu, m_ln, s_ln)
         pa_pdf = pareto_pdf(mu, alpha, mu_min)
-        mix_pdf = (1.0 - w)*ln_pdf + w*pa_pdf
-        lam = N * bw * mix_pdf   # 期望 count
-        # Poisson NLL（忽略常数 log(cnt!)，防数值问题加下界）
+        mix_pdf = (1.0 - w) * ln_pdf + w * pa_pdf
+        lam = N * bw * mix_pdf
         lam = np.clip(lam, 1e-300, None)
-        return float(np.sum(lam - cnt*np.log(lam)))
+        return float(np.sum(lam - cnt * np.log(lam)))
 
     th0 = pack(w0, m0, s0, a0, mu_min0)
     res = minimize(nll, th0, method="L-BFGS-B")
@@ -294,14 +338,14 @@ class BaseFitModel:
 
     # ----- NLL 与曲线生成 -----
     def _nll(self, mu, cnt, bw, params):
-        N = cnt.sum()
+        N = np.maximum(cnt.sum(), EPS)
         pdf = self._pdf(mu, params)
         lam = N * bw * pdf
         lam = np.clip(lam, 1e-300, None)
         return float(np.sum(lam - cnt * np.log(lam)))
 
     def _predict_curves(self, mu, cnt, bw, params):
-        N = cnt.sum()
+        N = np.maximum(cnt.sum(), EPS)
         pdf = self._pdf(mu, params)
         y = N * bw * pdf
         return {"x": mu, "fit": y}
@@ -311,7 +355,14 @@ class BaseFitModel:
         mu = np.asarray(mu, float)
         cnt = np.asarray(cnt, float)
         bw = np.asarray(bw, float)
-        ok = np.isfinite(mu) & np.isfinite(cnt) & np.isfinite(bw) & (bw > 0)
+        ok = (
+            np.isfinite(mu)
+            & np.isfinite(cnt)
+            & np.isfinite(bw)
+            & (bw > 0)
+            & (mu > 0)
+            & (cnt > 0)
+        )
         mu, cnt, bw = mu[ok], cnt[ok], bw[ok]
         if mu.size < 2 or cnt.sum() <= 0:
             return None
@@ -350,10 +401,11 @@ class LogNormalModel(BaseFitModel):
     param_names = ["m_ln", "s_ln"]
 
     def _default_init(self, mu, cnt, bw):
-        x = np.log(np.clip(mu, 1e-12, None))
+        x = np.log(np.clip(mu, EPS, None))
         w = cnt
-        m0 = (w * x).sum() / w.sum()
-        s0 = np.sqrt(max((w * (x - m0) ** 2).sum() / w.sum(), 1e-3))
+        wsum = np.maximum(w.sum(), EPS)
+        m0 = (w * x).sum() / wsum
+        s0 = np.sqrt(max((w * (x - m0) ** 2).sum() / wsum, 1e-3))
         return {"m_ln": m0, "s_ln": s0}
 
     def _default_bounds(self, mu, cnt, bw):
@@ -373,13 +425,14 @@ class LogNormParetoModel(BaseFitModel):
         self.pct_for_mu_min = pct_for_mu_min
 
     def _default_init(self, mu, cnt, bw):
-        N = cnt.sum()
+        N = np.maximum(cnt.sum(), EPS)
         mu_min0 = max(1e-6, weighted_quantile(mu, cnt, self.pct_for_mu_min / 100.0))
-        x = np.log(np.clip(mu, 1e-12, None))
+        x = np.log(np.clip(mu, EPS, None))
         wts = cnt
-        m0 = (wts * x).sum() / wts.sum()
-        s0 = np.sqrt(max((wts * (x - m0) ** 2).sum() / wts.sum(), 1e-3))
-        w0 = min(0.4, float((cnt[mu >= mu_min0].sum() / N)))
+        wsum = np.maximum(wts.sum(), EPS)
+        m0 = (wts * x).sum() / wsum
+        s0 = np.sqrt(max((wts * (x - m0) ** 2).sum() / wsum, 1e-3))
+        w0 = min(0.4, float(cnt[mu >= mu_min0].sum() / N))
         a0 = 3.0
         return {"w": w0, "m_ln": m0, "s_ln": s0, "alpha": a0, "mu_min": mu_min0}
 
@@ -399,7 +452,7 @@ class LogNormParetoModel(BaseFitModel):
         return (1.0 - params["w"]) * ln_pdf + params["w"] * pa_pdf
 
     def _predict_curves(self, mu, cnt, bw, params):
-        N = cnt.sum()
+        N = np.maximum(cnt.sum(), EPS)
         ln_pdf = lognormal_pdf(mu, params["m_ln"], params["s_ln"])
         pa_pdf = pareto_pdf(mu, params["alpha"], params["mu_min"])
         y_ln = N * bw * ((1.0 - params["w"]) * ln_pdf)
