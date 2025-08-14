@@ -2,6 +2,7 @@
 import numpy as np
 from functools import lru_cache
 from scipy import special
+from scipy.optimize import minimize
 
 
 
@@ -180,9 +181,6 @@ def fit_and_predict(mu, cnt, pct=95.0, grid_points=2000, bin_width=None):
 
 
 
-
-from scipy.optimize import minimize
-
 def fit_additive_lognorm_pareto_counts(mu, cnt, bin_widths, pct_for_mu_min=95.0):
     """
     两段叠加：counts ≈ N * Δμ * [(1-w) LN + w Pareto]
@@ -258,3 +256,186 @@ def fit_additive_lognorm_pareto_counts(mu, cnt, bin_widths, pct_for_mu_min=95.0)
         params={"w": float(w), "m_ln": float(m_ln), "s_ln": float(s_ln),
                 "alpha": float(alpha), "mu_min": float(mu_min)}
     )
+
+
+# ========= 可扩展拟合框架 =========
+
+FITTERS = {}
+
+
+def register_fitter(name):
+    """装饰器：注册一个拟合方法"""
+    def _decorator(cls):
+        FITTERS[name] = cls
+        return cls
+    return _decorator
+
+
+class BaseFitModel:
+    """拟合模型基类：子类需实现 _default_init、_default_bounds、_pdf"""
+
+    param_names = []
+
+    def __init__(self, init_params=None, bounds=None, fixed=None):
+        self.init_params = init_params or {}
+        self.bounds = bounds or {}
+        self.fixed = set(fixed or [])
+
+    # ----- 钩子：默认初值与范围 -----
+    def _default_init(self, mu, cnt, bw):
+        return {}
+
+    def _default_bounds(self, mu, cnt, bw):
+        return {name: (None, None) for name in self.param_names}
+
+    # ----- 子类需提供的 pdf -----
+    def _pdf(self, mu, params):
+        raise NotImplementedError
+
+    # ----- NLL 与曲线生成 -----
+    def _nll(self, mu, cnt, bw, params):
+        N = cnt.sum()
+        pdf = self._pdf(mu, params)
+        lam = N * bw * pdf
+        lam = np.clip(lam, 1e-300, None)
+        return float(np.sum(lam - cnt * np.log(lam)))
+
+    def _predict_curves(self, mu, cnt, bw, params):
+        N = cnt.sum()
+        pdf = self._pdf(mu, params)
+        y = N * bw * pdf
+        return {"x": mu, "fit": y}
+
+    # ----- 主入口 -----
+    def fit(self, mu, cnt, bw):
+        mu = np.asarray(mu, float)
+        cnt = np.asarray(cnt, float)
+        bw = np.asarray(bw, float)
+        ok = np.isfinite(mu) & np.isfinite(cnt) & np.isfinite(bw) & (bw > 0)
+        mu, cnt, bw = mu[ok], cnt[ok], bw[ok]
+        if mu.size < 2 or cnt.sum() <= 0:
+            return None
+
+        init = {**self._default_init(mu, cnt, bw), **self.init_params}
+        bounds = {**self._default_bounds(mu, cnt, bw), **self.bounds}
+
+        free = [p for p in self.param_names if p not in self.fixed]
+        if not free:
+            params = {p: init[p] for p in self.param_names}
+            curves = self._predict_curves(mu, cnt, bw, params)
+            return {"curves": curves, "params": {k: float(v) for k, v in params.items()}}
+
+        x0 = np.array([init[p] for p in free], float)
+        bnds = [bounds.get(p, (None, None)) for p in free]
+
+        def obj(x):
+            params = dict(zip(free, x))
+            for p in self.fixed:
+                params[p] = init[p]
+            return self._nll(mu, cnt, bw, params)
+
+        res = minimize(obj, x0, method="L-BFGS-B", bounds=bnds)
+        if not res.success:
+            return None
+        params = dict(zip(free, res.x))
+        for p in self.fixed:
+            params[p] = init[p]
+
+        curves = self._predict_curves(mu, cnt, bw, params)
+        return {"curves": curves, "params": {k: float(v) for k, v in params.items()}}
+
+
+@register_fitter("lognormal")
+class LogNormalModel(BaseFitModel):
+    param_names = ["m_ln", "s_ln"]
+
+    def _default_init(self, mu, cnt, bw):
+        x = np.log(np.clip(mu, 1e-12, None))
+        w = cnt
+        m0 = (w * x).sum() / w.sum()
+        s0 = np.sqrt(max((w * (x - m0) ** 2).sum() / w.sum(), 1e-3))
+        return {"m_ln": m0, "s_ln": s0}
+
+    def _default_bounds(self, mu, cnt, bw):
+        return {"m_ln": (None, None), "s_ln": (1e-6, None)}
+
+    def _pdf(self, mu, params):
+        return lognormal_pdf(mu, params["m_ln"], params["s_ln"])
+
+
+@register_fitter("lognorm_pareto")
+@register_fitter("lognormal+pareto")
+class LogNormParetoModel(BaseFitModel):
+    param_names = ["w", "m_ln", "s_ln", "alpha", "mu_min"]
+
+    def __init__(self, init_params=None, bounds=None, fixed=None, pct_for_mu_min=95.0):
+        super().__init__(init_params, bounds, fixed)
+        self.pct_for_mu_min = pct_for_mu_min
+
+    def _default_init(self, mu, cnt, bw):
+        N = cnt.sum()
+        mu_min0 = max(1e-6, weighted_quantile(mu, cnt, self.pct_for_mu_min / 100.0))
+        x = np.log(np.clip(mu, 1e-12, None))
+        wts = cnt
+        m0 = (wts * x).sum() / wts.sum()
+        s0 = np.sqrt(max((wts * (x - m0) ** 2).sum() / wts.sum(), 1e-3))
+        w0 = min(0.4, float((cnt[mu >= mu_min0].sum() / N)))
+        a0 = 3.0
+        return {"w": w0, "m_ln": m0, "s_ln": s0, "alpha": a0, "mu_min": mu_min0}
+
+    def _default_bounds(self, mu, cnt, bw):
+        mu_lo = float(np.min(mu))
+        return {
+            "w": (1e-6, 1 - 1e-6),
+            "m_ln": (None, None),
+            "s_ln": (1e-6, None),
+            "alpha": (1 + 1e-6, None),
+            "mu_min": (mu_lo, None),
+        }
+
+    def _pdf(self, mu, params):
+        ln_pdf = lognormal_pdf(mu, params["m_ln"], params["s_ln"])
+        pa_pdf = pareto_pdf(mu, params["alpha"], params["mu_min"])
+        return (1.0 - params["w"]) * ln_pdf + params["w"] * pa_pdf
+
+    def _predict_curves(self, mu, cnt, bw, params):
+        N = cnt.sum()
+        ln_pdf = lognormal_pdf(mu, params["m_ln"], params["s_ln"])
+        pa_pdf = pareto_pdf(mu, params["alpha"], params["mu_min"])
+        y_ln = N * bw * ((1.0 - params["w"]) * ln_pdf)
+        y_pa = N * bw * (params["w"] * pa_pdf)
+        y_mix = y_ln + y_pa
+        return {"x": mu, "ln": y_ln, "pareto": y_pa, "mix": y_mix}
+
+
+def fit_histogram(mu, cnt, bin_widths, method="lognormal", init_params=None,
+                  bounds=None, fixed=None, **method_kwargs):
+    """高层接口：按指定 method 拟合直方图
+
+    Parameters
+    ----------
+    mu : array
+        直方图中心
+    cnt : array
+        直方图计数
+    bin_widths : array or float
+        每个 bin 的宽度
+    method : str
+        拟合方法名称，例如 'lognormal'、'lognorm_pareto'
+    init_params/bounds/fixed : dict
+        运行时覆盖初值、参数范围或固定某些参数
+    method_kwargs : dict
+        传给具体拟合类的附加参数
+    """
+
+    bw = bin_widths
+    if np.isscalar(bw):
+        bw = np.full_like(mu, float(bw))
+
+    cls = FITTERS.get(method)
+    if cls is None:
+        raise ValueError(f"Unknown fit method: {method}")
+
+    fitter = cls(init_params=init_params, bounds=bounds, fixed=fixed, **method_kwargs)
+    return fitter.fit(mu, cnt, np.asarray(bw, float))
+
