@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 from dash import Dash, dcc, html, Output, Input, no_update, ctx, State
-# from fit_utils import fit_and_predict
+from fit_utils import fit_histogram, FITTERS
 
 
 
@@ -112,10 +112,13 @@ app.layout = html.Div([
             value="normal", inline=True, style={"margin": "6px 0"}
         ),
 
-        # 是否叠加拟合
+        # 拟合方式（可多选叠加）
         dcc.Checklist(
-            id="fit-on", options=[{"label":" 叠加拟合（LN+Pareto）", "value":"on"}],
-            value=[], inline=True, style={"margin":"4px 0"}
+            id="fit-methods",
+            options=[{"label": name, "value": name} for name in sorted(FITTERS.keys())],
+            value=[],
+            inline=True,
+            style={"margin": "4px 0"}
         ),
 
         # 阈值百分位（用于拆分主体/尾部）
@@ -307,12 +310,12 @@ def toggle_lock(clickData, locked_point):
     Input("xlim-fixed","value"),
     Input("xlim-percent","value"),   # ← 这里补上
     State("locked-point","data"),
-    Input("fit-on","value"),
+    Input("fit-methods","value"),
     Input("fit-pct","value"),
 )
 def update_hist(hoverData, clickData, xscale, mode,
                 xlim_mode, xlim_fixed, xlim_percent,  # ← 这里也要有
-                locked_point, fit_on, fit_pct):
+                locked_point, fit_methods, fit_pct):
     # 1) 选择数据来源（优先锁定；否则按照 hover/click 模式）
     if locked_point:
         idx, rid = locked_point
@@ -327,45 +330,42 @@ def update_hist(hoverData, clickData, xscale, mode,
     fig, meta = load_hist_for_rid(rid, xscale=xscale)
 
 
-    # === 拟合叠加（可选） ===
-    if isinstance(fit_on, (list, tuple)) and ("on" in fit_on):
+    # === 拟合叠加（可选，多方法） ===
+    if isinstance(fit_methods, (list, tuple)) and fit_methods:
         got = _load_hist_npz(rid) or _load_hist_txt_linear(rid) or _load_hist_txt_log(rid)
         if got is not None:
             mu_fit, cnt_fit, src, _ = got
 
-            # 每个 bin 的宽度（和你的直方图一致）
             if src == "linear":
                 bin_widths = np.full_like(mu_fit, 1.0/1000.0, dtype=float)
             else:
                 dL = 0.01
                 bin_widths = mu_fit * (np.exp(0.5*dL) - np.exp(-0.5*dL))
 
-            # 调用“叠加”拟合（pct 作为 mu_min 的初始化分位）
-            from fit_utils import fit_additive_lognorm_pareto_counts
-            fres = fit_additive_lognorm_pareto_counts(mu_fit, cnt_fit, bin_widths, pct_for_mu_min=float(fit_pct))
-            if fres is not None:
+            for method in fit_methods:
+                fres = fit_histogram(mu_fit, cnt_fit, bin_widths, method=method, pct_for_mu_min=float(fit_pct))
+                if fres is None:
+                    continue
                 x = fres["curves"]["x"]
-                y_mix  = fres["curves"]["mix"]
-                y_ln   = fres["curves"]["ln"]
-                y_tail = fres["curves"]["pareto"]
+                curves = fres["curves"]
 
-                # log 轴下过滤 μ≤0
                 if xscale == "log":
                     mpos = x > 0
-                    x, y_mix, y_ln, y_tail = x[mpos], y_mix[mpos], y_ln[mpos], y_tail[mpos]
+                    x = x[mpos]
+                    for k in list(curves.keys()):
+                        curves[k] = curves[k][mpos]
 
-                # 叠加三条曲线（和直方图是一一对应的“count”）
-                fig.add_scatter(x=x, y=y_mix,  mode="lines", name="fit: mix",  line=dict(width=2))
-                fig.add_scatter(x=x, y=y_ln,   mode="lines", name="fit: bulk", line=dict(width=1, dash="dot"))
-                fig.add_scatter(x=x, y=y_tail, mode="lines", name="fit: tail", line=dict(width=1, dash="dash"))
+                if {"ln", "pareto", "mix"}.issubset(curves.keys()):
+                    fig.add_scatter(x=x, y=curves["mix"], mode="lines", name=f"{method}: mix", line=dict(width=2))
+                    fig.add_scatter(x=x, y=curves["ln"], mode="lines", name=f"{method}: bulk", line=dict(width=1, dash="dot"))
+                    fig.add_scatter(x=x, y=curves["pareto"], mode="lines", name=f"{method}: tail", line=dict(width=1, dash="dash"))
+                else:
+                    y = curves.get("fit") or curves.get("mix")
+                    if y is not None:
+                        fig.add_scatter(x=x, y=y, mode="lines", name=method, line=dict(width=2))
 
                 p = fres["params"]
-                meta += f" | mix-fit w={p['w']:.2f}, lnμ~N({p['m_ln']:.3g},{p['s_ln']:.3g}), α={p['alpha']:.3g}, μmin={p['mu_min']:.3g}"
-
-
-
-
-
+                meta += " | " + method + " " + ", ".join([f"{k}={v:.3g}" for k, v in p.items()])
 
     # 3) 计算当前直方图的 μ 范围，并准备回填滑条
     mu = get_mu_for_rid(rid, xscale=xscale)
