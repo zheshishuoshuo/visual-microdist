@@ -461,6 +461,31 @@ class LogNormParetoModel(BaseFitModel):
         return {"x": mu, "ln": y_ln, "pareto": y_pa, "mix": y_mix}
 
 
+@register_fitter("exponential")
+class ExponentialModel(BaseFitModel):
+    """单参数指数分布: pdf = λ exp(-λ μ), μ≥0"""
+
+    param_names = ["lam"]
+
+    def _default_init(self, mu, cnt, bw):
+        mu_safe = np.clip(mu, EPS, None)
+        w = cnt
+        denom = np.maximum((w * mu_safe).sum(), EPS)
+        lam0 = w.sum() / denom
+        return {"lam": lam0}
+
+    def _default_bounds(self, mu, cnt, bw):
+        return {"lam": (1e-6, None)}
+
+    def _pdf(self, mu, params):
+        mu = np.asarray(mu, float)
+        lam = float(params["lam"])
+        out = np.zeros_like(mu, float)
+        m = (mu >= 0)
+        out[m] = lam * np.exp(-lam * mu[m])
+        return out
+
+
 def fit_histogram(mu, cnt, bin_widths, method="lognormal", init_params=None,
                   bounds=None, fixed=None, **method_kwargs):
     """高层接口：按指定 method 拟合直方图
