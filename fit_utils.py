@@ -3,6 +3,7 @@ import numpy as np
 from functools import lru_cache
 from scipy import special
 from scipy.optimize import minimize
+import inspect
 
 
 EPS = 1e-12
@@ -514,6 +515,9 @@ def fit_histogram(mu, cnt, bin_widths, method="lognormal", init_params=None,
     if cls is None:
         raise ValueError(f"Unknown fit method: {method}")
 
-    fitter = cls(init_params=init_params, bounds=bounds, fixed=fixed, **method_kwargs)
+    sig = inspect.signature(cls.__init__)
+    extra = {k: v for k, v in method_kwargs.items() if k in sig.parameters}
+
+    fitter = cls(init_params=init_params, bounds=bounds, fixed=fixed, **extra)
     return fitter.fit(mu, cnt, np.asarray(bw, float))
 
