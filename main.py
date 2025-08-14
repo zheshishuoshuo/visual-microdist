@@ -351,7 +351,9 @@ def update_hist(hoverData, clickData, xscale, mode,
                     fig.add_scatter(x=x, y=curves["ln"], mode="lines", name=f"{method}: bulk", line=dict(width=1, dash="dot"))
                     fig.add_scatter(x=x, y=curves["pareto"], mode="lines", name=f"{method}: tail", line=dict(width=1, dash="dash"))
                 else:
-                    y = curves.get("fit") or curves.get("mix")
+                    y = curves.get("fit")
+                    if y is None:
+                        y = curves.get("mix")
                     if y is not None:
                         fig.add_scatter(x=x, y=y, mode="lines", name=method, line=dict(width=2))
 
