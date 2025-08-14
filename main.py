@@ -121,14 +121,6 @@ app.layout = html.Div([
             style={"margin": "4px 0"}
         ),
 
-        # 阈值百分位（用于拆分主体/尾部）
-        dcc.Slider(
-            id="fit-pct", min=85.0, max=99.5, step=0.5, value=95.0,
-            marks={90:"90%", 95:"95%", 97.5:"97.5%", 99:"99%", 99.5:"99.5%"},
-            tooltip={"placement":"bottom", "always_visible": False}
-        ),
-
-
         # 固定范围滑条（仅 fixed 时显示）
         # html.Div(id="fixed-wrap", children=[
         #     dcc.RangeSlider(
@@ -311,11 +303,10 @@ def toggle_lock(clickData, locked_point):
     Input("xlim-percent","value"),   # ← 这里补上
     State("locked-point","data"),
     Input("fit-methods","value"),
-    Input("fit-pct","value"),
 )
 def update_hist(hoverData, clickData, xscale, mode,
                 xlim_mode, xlim_fixed, xlim_percent,  # ← 这里也要有
-                locked_point, fit_methods, fit_pct):
+                locked_point, fit_methods):
     # 1) 选择数据来源（优先锁定；否则按照 hover/click 模式）
     if locked_point:
         idx, rid = locked_point
@@ -343,7 +334,7 @@ def update_hist(hoverData, clickData, xscale, mode,
                 bin_widths = mu_fit * (np.exp(0.5*dL) - np.exp(-0.5*dL))
 
             for method in fit_methods:
-                fres = fit_histogram(mu_fit, cnt_fit, bin_widths, method=method, pct_for_mu_min=float(fit_pct))
+                fres = fit_histogram(mu_fit, cnt_fit, bin_widths, method=method)
                 if fres is None:
                     continue
                 x = fres["curves"]["x"]
