@@ -2,3832 +2,3832 @@
   "count": 957,
   "items": {
     "r0001": {
-      "bins": 27612,
-      "src": "linear"
+      "linear_bins": 27612,
+      "log_bins": 2685
     },
     "r0002": {
-      "bins": 25768,
-      "src": "linear"
+      "linear_bins": 25768,
+      "log_bins": 2484
     },
     "r0003": {
-      "bins": 32211,
-      "src": "linear"
+      "linear_bins": 32211,
+      "log_bins": 2543
     },
     "r0004": {
-      "bins": 18699,
-      "src": "linear"
+      "linear_bins": 18699,
+      "log_bins": 2231
     },
     "r0005": {
-      "bins": 15911,
-      "src": "linear"
+      "linear_bins": 15911,
+      "log_bins": 2346
     },
     "r0006": {
-      "bins": 10378,
-      "src": "linear"
+      "linear_bins": 10378,
+      "log_bins": 2521
     },
     "r0007": {
-      "bins": 51218,
-      "src": "linear"
+      "linear_bins": 51218,
+      "log_bins": 1626
     },
     "r0008": {
-      "bins": 9652,
-      "src": "linear"
+      "linear_bins": 9652,
+      "log_bins": 2673
     },
     "r0009": {
-      "bins": 22977,
-      "src": "linear"
+      "linear_bins": 22977,
+      "log_bins": 2386
     },
     "r0010": {
-      "bins": 12965,
-      "src": "linear"
+      "linear_bins": 12965,
+      "log_bins": 2522
     },
     "r0011": {
-      "bins": 29970,
-      "src": "linear"
+      "linear_bins": 29970,
+      "log_bins": 2457
     },
     "r0012": {
-      "bins": 23575,
-      "src": "linear"
+      "linear_bins": 23575,
+      "log_bins": 2513
     },
     "r0013": {
-      "bins": 28855,
-      "src": "linear"
+      "linear_bins": 28855,
+      "log_bins": 2715
     },
     "r0014": {
-      "bins": 41792,
-      "src": "linear"
+      "linear_bins": 41792,
+      "log_bins": 2448
     },
     "r0015": {
-      "bins": 23703,
-      "src": "linear"
+      "linear_bins": 23703,
+      "log_bins": 2570
     },
     "r0016": {
-      "bins": 23456,
-      "src": "linear"
+      "linear_bins": 23456,
+      "log_bins": 2509
     },
     "r0017": {
-      "bins": 9478,
-      "src": "linear"
+      "linear_bins": 9478,
+      "log_bins": 2491
     },
     "r0018": {
-      "bins": 10466,
-      "src": "linear"
+      "linear_bins": 10466,
+      "log_bins": 2545
     },
     "r0019": {
-      "bins": 19071,
-      "src": "linear"
+      "linear_bins": 19071,
+      "log_bins": 2435
     },
     "r0020": {
-      "bins": 30226,
-      "src": "linear"
+      "linear_bins": 30226,
+      "log_bins": 2569
     },
     "r0021": {
-      "bins": 10736,
-      "src": "linear"
+      "linear_bins": 10736,
+      "log_bins": 2532
     },
     "r0022": {
-      "bins": 15407,
-      "src": "linear"
+      "linear_bins": 15407,
+      "log_bins": 1930
     },
     "r0023": {
-      "bins": 11084,
-      "src": "linear"
+      "linear_bins": 11084,
+      "log_bins": 2489
     },
     "r0024": {
-      "bins": 6450,
-      "src": "linear"
+      "linear_bins": 6450,
+      "log_bins": 2534
     },
     "r0025": {
-      "bins": 6350,
-      "src": "linear"
+      "linear_bins": 6350,
+      "log_bins": 2546
     },
     "r0026": {
-      "bins": 5827,
-      "src": "linear"
+      "linear_bins": 5827,
+      "log_bins": 2576
     },
     "r0027": {
-      "bins": 4861,
-      "src": "linear"
+      "linear_bins": 4861,
+      "log_bins": 2564
     },
     "r0028": {
-      "bins": 6165,
-      "src": "linear"
+      "linear_bins": 6165,
+      "log_bins": 2315
     },
     "r0029": {
-      "bins": 57546,
-      "src": "linear"
+      "linear_bins": 57546,
+      "log_bins": 2574
     },
     "r0030": {
-      "bins": 21542,
-      "src": "linear"
+      "linear_bins": 21542,
+      "log_bins": 2394
     },
     "r0031": {
-      "bins": 44846,
-      "src": "linear"
+      "linear_bins": 44846,
+      "log_bins": 1790
     },
     "r0032": {
-      "bins": 17824,
-      "src": "linear"
+      "linear_bins": 17824,
+      "log_bins": 2589
     },
     "r0033": {
-      "bins": 10800,
-      "src": "linear"
+      "linear_bins": 10800,
+      "log_bins": 2551
     },
     "r0034": {
-      "bins": 9609,
-      "src": "linear"
+      "linear_bins": 9609,
+      "log_bins": 2271
     },
     "r0035": {
-      "bins": 16548,
-      "src": "linear"
+      "linear_bins": 16548,
+      "log_bins": 2658
     },
     "r0036": {
-      "bins": 17643,
-      "src": "linear"
+      "linear_bins": 17643,
+      "log_bins": 2618
     },
     "r0037": {
-      "bins": 5928,
-      "src": "linear"
+      "linear_bins": 5928,
+      "log_bins": 2200
     },
     "r0038": {
-      "bins": 9775,
-      "src": "linear"
+      "linear_bins": 9775,
+      "log_bins": 1284
     },
     "r0039": {
-      "bins": 14329,
-      "src": "linear"
+      "linear_bins": 14329,
+      "log_bins": 2471
     },
     "r0040": {
-      "bins": 33204,
-      "src": "linear"
+      "linear_bins": 33204,
+      "log_bins": 2478
     },
     "r0041": {
-      "bins": 7604,
-      "src": "linear"
+      "linear_bins": 7604,
+      "log_bins": 2252
     },
     "r0042": {
-      "bins": 8213,
-      "src": "linear"
+      "linear_bins": 8213,
+      "log_bins": 2714
     },
     "r0043": {
-      "bins": 4904,
-      "src": "linear"
+      "linear_bins": 4904,
+      "log_bins": 2526
     },
     "r0044": {
-      "bins": 26490,
-      "src": "linear"
+      "linear_bins": 26490,
+      "log_bins": 2653
     },
     "r0045": {
-      "bins": 18789,
-      "src": "linear"
+      "linear_bins": 18789,
+      "log_bins": 2697
     },
     "r0046": {
-      "bins": 12510,
-      "src": "linear"
+      "linear_bins": 12510,
+      "log_bins": 2219
     },
     "r0047": {
-      "bins": 7397,
-      "src": "linear"
+      "linear_bins": 7397,
+      "log_bins": 2587
     },
     "r0048": {
-      "bins": 15195,
-      "src": "linear"
+      "linear_bins": 15195,
+      "log_bins": 2637
     },
     "r0049": {
-      "bins": 20758,
-      "src": "linear"
+      "linear_bins": 20758,
+      "log_bins": 2456
     },
     "r0050": {
-      "bins": 4434,
-      "src": "linear"
+      "linear_bins": 4434,
+      "log_bins": 2429
     },
     "r0051": {
-      "bins": 20030,
-      "src": "linear"
+      "linear_bins": 20030,
+      "log_bins": 2545
     },
     "r0052": {
-      "bins": 22961,
-      "src": "linear"
+      "linear_bins": 22961,
+      "log_bins": 2488
     },
     "r0053": {
-      "bins": 47446,
-      "src": "linear"
+      "linear_bins": 47446,
+      "log_bins": 2524
     },
     "r0054": {
-      "bins": 10763,
-      "src": "linear"
+      "linear_bins": 10763,
+      "log_bins": 2420
     },
     "r0055": {
-      "bins": 122145,
-      "src": "linear"
+      "linear_bins": 122145,
+      "log_bins": 1697
     },
     "r0056": {
-      "bins": 11071,
-      "src": "linear"
+      "linear_bins": 11071,
+      "log_bins": 2535
     },
     "r0057": {
-      "bins": 17832,
-      "src": "linear"
+      "linear_bins": 17832,
+      "log_bins": 2364
     },
     "r0058": {
-      "bins": 9054,
-      "src": "linear"
+      "linear_bins": 9054,
+      "log_bins": 2599
     },
     "r0059": {
-      "bins": 15973,
-      "src": "linear"
+      "linear_bins": 15973,
+      "log_bins": 2512
     },
     "r0060": {
-      "bins": 37558,
-      "src": "linear"
+      "linear_bins": 37558,
+      "log_bins": 1919
     },
     "r0062": {
-      "bins": 90799,
-      "src": "linear"
+      "linear_bins": 90799,
+      "log_bins": 1633
     },
     "r0063": {
-      "bins": 42231,
-      "src": "linear"
+      "linear_bins": 42231,
+      "log_bins": 2371
     },
     "r0064": {
-      "bins": 20981,
-      "src": "linear"
+      "linear_bins": 20981,
+      "log_bins": 1945
     },
     "r0065": {
-      "bins": 32859,
-      "src": "linear"
+      "linear_bins": 32859,
+      "log_bins": 2455
     },
     "r0066": {
-      "bins": 17872,
-      "src": "linear"
+      "linear_bins": 17872,
+      "log_bins": 2447
     },
     "r0067": {
-      "bins": 17462,
-      "src": "linear"
+      "linear_bins": 17462,
+      "log_bins": 2547
     },
     "r0068": {
-      "bins": 19239,
-      "src": "linear"
+      "linear_bins": 19239,
+      "log_bins": 2590
     },
     "r0069": {
-      "bins": 25427,
-      "src": "linear"
+      "linear_bins": 25427,
+      "log_bins": 2116
     },
     "r0070": {
-      "bins": 16043,
-      "src": "linear"
+      "linear_bins": 16043,
+      "log_bins": 2497
     },
     "r0071": {
-      "bins": 9471,
-      "src": "linear"
+      "linear_bins": 9471,
+      "log_bins": 2666
     },
     "r0072": {
-      "bins": 9707,
-      "src": "linear"
+      "linear_bins": 9707,
+      "log_bins": 2198
     },
     "r0073": {
-      "bins": 22116,
-      "src": "linear"
+      "linear_bins": 22116,
+      "log_bins": 2298
     },
     "r0074": {
-      "bins": 22631,
-      "src": "linear"
+      "linear_bins": 22631,
+      "log_bins": 2221
     },
     "r0075": {
-      "bins": 28561,
-      "src": "linear"
+      "linear_bins": 28561,
+      "log_bins": 2121
     },
     "r0076": {
-      "bins": 9046,
-      "src": "linear"
+      "linear_bins": 9046,
+      "log_bins": 2538
     },
     "r0077": {
-      "bins": 23831,
-      "src": "linear"
+      "linear_bins": 23831,
+      "log_bins": 2456
     },
     "r0078": {
-      "bins": 9585,
-      "src": "linear"
+      "linear_bins": 9585,
+      "log_bins": 2381
     },
     "r0079": {
-      "bins": 14654,
-      "src": "linear"
+      "linear_bins": 14654,
+      "log_bins": 2412
     },
     "r0080": {
-      "bins": 26636,
-      "src": "linear"
+      "linear_bins": 26636,
+      "log_bins": 2546
     },
     "r0081": {
-      "bins": 88681,
-      "src": "linear"
+      "linear_bins": 88681,
+      "log_bins": 2813
     },
     "r0082": {
-      "bins": 7070,
-      "src": "linear"
+      "linear_bins": 7070,
+      "log_bins": 2570
     },
     "r0083": {
-      "bins": 30562,
-      "src": "linear"
+      "linear_bins": 30562,
+      "log_bins": 2515
     },
     "r0084": {
-      "bins": 23919,
-      "src": "linear"
+      "linear_bins": 23919,
+      "log_bins": 2523
     },
     "r0085": {
-      "bins": 11638,
-      "src": "linear"
+      "linear_bins": 11638,
+      "log_bins": 2415
     },
     "r0086": {
-      "bins": 5739,
-      "src": "linear"
+      "linear_bins": 5739,
+      "log_bins": 2438
     },
     "r0087": {
-      "bins": 7007,
-      "src": "linear"
+      "linear_bins": 7007,
+      "log_bins": 2499
     },
     "r0088": {
-      "bins": 33728,
-      "src": "linear"
+      "linear_bins": 33728,
+      "log_bins": 2641
     },
     "r0089": {
-      "bins": 19520,
-      "src": "linear"
+      "linear_bins": 19520,
+      "log_bins": 2336
     },
     "r0090": {
-      "bins": 38534,
-      "src": "linear"
+      "linear_bins": 38534,
+      "log_bins": 2401
     },
     "r0091": {
-      "bins": 106800,
-      "src": "linear"
+      "linear_bins": 106800,
+      "log_bins": 2148
     },
     "r0092": {
-      "bins": 39380,
-      "src": "linear"
+      "linear_bins": 39380,
+      "log_bins": 1953
     },
     "r0093": {
-      "bins": 11971,
-      "src": "linear"
+      "linear_bins": 11971,
+      "log_bins": 2648
     },
     "r0094": {
-      "bins": 102084,
-      "src": "linear"
+      "linear_bins": 102084,
+      "log_bins": 2469
     },
     "r0095": {
-      "bins": 12813,
-      "src": "linear"
+      "linear_bins": 12813,
+      "log_bins": 2587
     },
     "r0096": {
-      "bins": 52224,
-      "src": "linear"
+      "linear_bins": 52224,
+      "log_bins": 2239
     },
     "r0097": {
-      "bins": 36784,
-      "src": "linear"
+      "linear_bins": 36784,
+      "log_bins": 1526
     },
     "r0099": {
-      "bins": 9678,
-      "src": "linear"
+      "linear_bins": 9678,
+      "log_bins": 2441
     },
     "r0100": {
-      "bins": 28716,
-      "src": "linear"
+      "linear_bins": 28716,
+      "log_bins": 2411
     },
     "r0101": {
-      "bins": 33226,
-      "src": "linear"
+      "linear_bins": 33226,
+      "log_bins": 1531
     },
     "r0102": {
-      "bins": 18475,
-      "src": "linear"
+      "linear_bins": 18475,
+      "log_bins": 2239
     },
     "r0103": {
-      "bins": 48688,
-      "src": "linear"
+      "linear_bins": 48688,
+      "log_bins": 2428
     },
     "r0104": {
-      "bins": 33203,
-      "src": "linear"
+      "linear_bins": 33203,
+      "log_bins": 2566
     },
     "r0105": {
-      "bins": 70301,
-      "src": "linear"
+      "linear_bins": 70301,
+      "log_bins": 1661
     },
     "r0106": {
-      "bins": 4992,
-      "src": "linear"
+      "linear_bins": 4992,
+      "log_bins": 2525
     },
     "r0107": {
-      "bins": 15010,
-      "src": "linear"
+      "linear_bins": 15010,
+      "log_bins": 2532
     },
     "r0108": {
-      "bins": 19851,
-      "src": "linear"
+      "linear_bins": 19851,
+      "log_bins": 1505
     },
     "r0109": {
-      "bins": 6411,
-      "src": "linear"
+      "linear_bins": 6411,
+      "log_bins": 2469
     },
     "r0110": {
-      "bins": 13047,
-      "src": "linear"
+      "linear_bins": 13047,
+      "log_bins": 2578
     },
     "r0111": {
-      "bins": 6176,
-      "src": "linear"
+      "linear_bins": 6176,
+      "log_bins": 2519
     },
     "r0112": {
-      "bins": 12508,
-      "src": "linear"
+      "linear_bins": 12508,
+      "log_bins": 2539
     },
     "r0113": {
-      "bins": 18126,
-      "src": "linear"
+      "linear_bins": 18126,
+      "log_bins": 1508
     },
     "r0114": {
-      "bins": 22003,
-      "src": "linear"
+      "linear_bins": 22003,
+      "log_bins": 2603
     },
     "r0115": {
-      "bins": 8611,
-      "src": "linear"
+      "linear_bins": 8611,
+      "log_bins": 1161
     },
     "r0116": {
-      "bins": 8553,
-      "src": "linear"
+      "linear_bins": 8553,
+      "log_bins": 2580
     },
     "r0117": {
-      "bins": 109207,
-      "src": "linear"
+      "linear_bins": 109207,
+      "log_bins": 1588
     },
     "r0118": {
-      "bins": 13909,
-      "src": "linear"
+      "linear_bins": 13909,
+      "log_bins": 2371
     },
     "r0119": {
-      "bins": 19529,
-      "src": "linear"
+      "linear_bins": 19529,
+      "log_bins": 2501
     },
     "r0120": {
-      "bins": 8915,
-      "src": "linear"
+      "linear_bins": 8915,
+      "log_bins": 1823
     },
     "r0121": {
-      "bins": 11613,
-      "src": "linear"
+      "linear_bins": 11613,
+      "log_bins": 2504
     },
     "r0122": {
-      "bins": 8242,
-      "src": "linear"
+      "linear_bins": 8242,
+      "log_bins": 2216
     },
     "r0123": {
-      "bins": 9404,
-      "src": "linear"
+      "linear_bins": 9404,
+      "log_bins": 2225
     },
     "r0124": {
-      "bins": 17520,
-      "src": "linear"
+      "linear_bins": 17520,
+      "log_bins": 1474
     },
     "r0125": {
-      "bins": 6173,
-      "src": "linear"
+      "linear_bins": 6173,
+      "log_bins": 2712
     },
     "r0126": {
-      "bins": 36495,
-      "src": "linear"
+      "linear_bins": 36495,
+      "log_bins": 2418
     },
     "r0127": {
-      "bins": 7099,
-      "src": "linear"
+      "linear_bins": 7099,
+      "log_bins": 2613
     },
     "r0128": {
-      "bins": 133953,
-      "src": "linear"
+      "linear_bins": 133953,
+      "log_bins": 2574
     },
     "r0129": {
-      "bins": 18536,
-      "src": "linear"
+      "linear_bins": 18536,
+      "log_bins": 2601
     },
     "r0130": {
-      "bins": 17189,
-      "src": "linear"
+      "linear_bins": 17189,
+      "log_bins": 2505
     },
     "r0131": {
-      "bins": 8168,
-      "src": "linear"
+      "linear_bins": 8168,
+      "log_bins": 2477
     },
     "r0132": {
-      "bins": 11205,
-      "src": "linear"
+      "linear_bins": 11205,
+      "log_bins": 2415
     },
     "r0133": {
-      "bins": 70545,
-      "src": "linear"
+      "linear_bins": 70545,
+      "log_bins": 1743
     },
     "r0134": {
-      "bins": 5182,
-      "src": "linear"
+      "linear_bins": 5182,
+      "log_bins": 2568
     },
     "r0135": {
-      "bins": 25718,
-      "src": "linear"
+      "linear_bins": 25718,
+      "log_bins": 2447
     },
     "r0136": {
-      "bins": 18394,
-      "src": "linear"
+      "linear_bins": 18394,
+      "log_bins": 2494
     },
     "r0137": {
-      "bins": 14987,
-      "src": "linear"
+      "linear_bins": 14987,
+      "log_bins": 2394
     },
     "r0138": {
-      "bins": 14249,
-      "src": "linear"
+      "linear_bins": 14249,
+      "log_bins": 2505
     },
     "r0139": {
-      "bins": 34717,
-      "src": "linear"
+      "linear_bins": 34717,
+      "log_bins": 2543
     },
     "r0140": {
-      "bins": 8942,
-      "src": "linear"
+      "linear_bins": 8942,
+      "log_bins": 2199
     },
     "r0141": {
-      "bins": 20249,
-      "src": "linear"
+      "linear_bins": 20249,
+      "log_bins": 2631
     },
     "r0142": {
-      "bins": 13671,
-      "src": "linear"
+      "linear_bins": 13671,
+      "log_bins": 2365
     },
     "r0143": {
-      "bins": 43912,
-      "src": "linear"
+      "linear_bins": 43912,
+      "log_bins": 2732
     },
     "r0144": {
-      "bins": 6620,
-      "src": "linear"
+      "linear_bins": 6620,
+      "log_bins": 2554
     },
     "r0145": {
-      "bins": 15248,
-      "src": "linear"
+      "linear_bins": 15248,
+      "log_bins": 2476
     },
     "r0146": {
-      "bins": 29403,
-      "src": "linear"
+      "linear_bins": 29403,
+      "log_bins": 2697
     },
     "r0147": {
-      "bins": 11403,
-      "src": "linear"
+      "linear_bins": 11403,
+      "log_bins": 2530
     },
     "r0148": {
-      "bins": 10286,
-      "src": "linear"
+      "linear_bins": 10286,
+      "log_bins": 2574
     },
     "r0149": {
-      "bins": 21063,
-      "src": "linear"
+      "linear_bins": 21063,
+      "log_bins": 1505
     },
     "r0150": {
-      "bins": 27410,
-      "src": "linear"
+      "linear_bins": 27410,
+      "log_bins": 2650
     },
     "r0151": {
-      "bins": 14235,
-      "src": "linear"
+      "linear_bins": 14235,
+      "log_bins": 2292
     },
     "r0152": {
-      "bins": 3770,
-      "src": "linear"
+      "linear_bins": 3770,
+      "log_bins": 2629
     },
     "r0153": {
-      "bins": 38426,
-      "src": "linear"
+      "linear_bins": 38426,
+      "log_bins": 2428
     },
     "r0154": {
-      "bins": 16178,
-      "src": "linear"
+      "linear_bins": 16178,
+      "log_bins": 2553
     },
     "r0155": {
-      "bins": 9802,
-      "src": "linear"
+      "linear_bins": 9802,
+      "log_bins": 2494
     },
     "r0156": {
-      "bins": 9582,
-      "src": "linear"
+      "linear_bins": 9582,
+      "log_bins": 2103
     },
     "r0157": {
-      "bins": 26174,
-      "src": "linear"
+      "linear_bins": 26174,
+      "log_bins": 2703
     },
     "r0158": {
-      "bins": 11491,
-      "src": "linear"
+      "linear_bins": 11491,
+      "log_bins": 2494
     },
     "r0159": {
-      "bins": 50443,
-      "src": "linear"
+      "linear_bins": 50443,
+      "log_bins": 1703
     },
     "r0160": {
-      "bins": 17796,
-      "src": "linear"
+      "linear_bins": 17796,
+      "log_bins": 2469
     },
     "r0161": {
-      "bins": 4765,
-      "src": "linear"
+      "linear_bins": 4765,
+      "log_bins": 2726
     },
     "r0162": {
-      "bins": 9125,
-      "src": "linear"
+      "linear_bins": 9125,
+      "log_bins": 2446
     },
     "r0163": {
-      "bins": 12960,
-      "src": "linear"
+      "linear_bins": 12960,
+      "log_bins": 2450
     },
     "r0164": {
-      "bins": 9037,
-      "src": "linear"
+      "linear_bins": 9037,
+      "log_bins": 2531
     },
     "r0165": {
-      "bins": 3871,
-      "src": "linear"
+      "linear_bins": 3871,
+      "log_bins": 2542
     },
     "r0166": {
-      "bins": 9229,
-      "src": "linear"
+      "linear_bins": 9229,
+      "log_bins": 2619
     },
     "r0167": {
-      "bins": 9874,
-      "src": "linear"
+      "linear_bins": 9874,
+      "log_bins": 2552
     },
     "r0168": {
-      "bins": 13784,
-      "src": "linear"
+      "linear_bins": 13784,
+      "log_bins": 2366
     },
     "r0169": {
-      "bins": 14055,
-      "src": "linear"
+      "linear_bins": 14055,
+      "log_bins": 2592
     },
     "r0170": {
-      "bins": 10216,
-      "src": "linear"
+      "linear_bins": 10216,
+      "log_bins": 2582
     },
     "r0171": {
-      "bins": 7060,
-      "src": "linear"
+      "linear_bins": 7060,
+      "log_bins": 2455
     },
     "r0172": {
-      "bins": 8008,
-      "src": "linear"
+      "linear_bins": 8008,
+      "log_bins": 2638
     },
     "r0173": {
-      "bins": 17160,
-      "src": "linear"
+      "linear_bins": 17160,
+      "log_bins": 2639
     },
     "r0174": {
-      "bins": 34189,
-      "src": "linear"
+      "linear_bins": 34189,
+      "log_bins": 907
     },
     "r0175": {
-      "bins": 38192,
-      "src": "linear"
+      "linear_bins": 38192,
+      "log_bins": 1760
     },
     "r0176": {
-      "bins": 8807,
-      "src": "linear"
+      "linear_bins": 8807,
+      "log_bins": 2605
     },
     "r0177": {
-      "bins": 41073,
-      "src": "linear"
+      "linear_bins": 41073,
+      "log_bins": 1407
     },
     "r0178": {
-      "bins": 474003,
-      "src": "linear"
+      "linear_bins": 474003,
+      "log_bins": 1757
     },
     "r0179": {
-      "bins": 19770,
-      "src": "linear"
+      "linear_bins": 19770,
+      "log_bins": 2458
     },
     "r0180": {
-      "bins": 7377,
-      "src": "linear"
+      "linear_bins": 7377,
+      "log_bins": 2526
     },
     "r0181": {
-      "bins": 21092,
-      "src": "linear"
+      "linear_bins": 21092,
+      "log_bins": 2502
     },
     "r0182": {
-      "bins": 7447,
-      "src": "linear"
+      "linear_bins": 7447,
+      "log_bins": 2219
     },
     "r0183": {
-      "bins": 16622,
-      "src": "linear"
+      "linear_bins": 16622,
+      "log_bins": 2467
     },
     "r0184": {
-      "bins": 31330,
-      "src": "linear"
+      "linear_bins": 31330,
+      "log_bins": 2484
     },
     "r0185": {
-      "bins": 5185,
-      "src": "linear"
+      "linear_bins": 5185,
+      "log_bins": 2554
     },
     "r0186": {
-      "bins": 16223,
-      "src": "linear"
+      "linear_bins": 16223,
+      "log_bins": 2461
     },
     "r0187": {
-      "bins": 31926,
-      "src": "linear"
+      "linear_bins": 31926,
+      "log_bins": 1662
     },
     "r0188": {
-      "bins": 23969,
-      "src": "linear"
+      "linear_bins": 23969,
+      "log_bins": 2697
     },
     "r0189": {
-      "bins": 4996,
-      "src": "linear"
+      "linear_bins": 4996,
+      "log_bins": 2467
     },
     "r0190": {
-      "bins": 12168,
-      "src": "linear"
+      "linear_bins": 12168,
+      "log_bins": 2502
     },
     "r0191": {
-      "bins": 12170,
-      "src": "linear"
+      "linear_bins": 12170,
+      "log_bins": 2631
     },
     "r0192": {
-      "bins": 32724,
-      "src": "linear"
+      "linear_bins": 32724,
+      "log_bins": 1693
     },
     "r0193": {
-      "bins": 8114,
-      "src": "linear"
+      "linear_bins": 8114,
+      "log_bins": 2261
     },
     "r0194": {
-      "bins": 30174,
-      "src": "linear"
+      "linear_bins": 30174,
+      "log_bins": 2612
     },
     "r0195": {
-      "bins": 19651,
-      "src": "linear"
+      "linear_bins": 19651,
+      "log_bins": 2593
     },
     "r0196": {
-      "bins": 18143,
-      "src": "linear"
+      "linear_bins": 18143,
+      "log_bins": 2716
     },
     "r0197": {
-      "bins": 38798,
-      "src": "linear"
+      "linear_bins": 38798,
+      "log_bins": 2317
     },
     "r0198": {
-      "bins": 4880,
-      "src": "linear"
+      "linear_bins": 4880,
+      "log_bins": 2654
     },
     "r0199": {
-      "bins": 6370,
-      "src": "linear"
+      "linear_bins": 6370,
+      "log_bins": 2630
     },
     "r0200": {
-      "bins": 7607,
-      "src": "linear"
+      "linear_bins": 7607,
+      "log_bins": 2296
     },
     "r0201": {
-      "bins": 18418,
-      "src": "linear"
+      "linear_bins": 18418,
+      "log_bins": 2490
     },
     "r0202": {
-      "bins": 49695,
-      "src": "linear"
+      "linear_bins": 49695,
+      "log_bins": 2731
     },
     "r0203": {
-      "bins": 28556,
-      "src": "linear"
+      "linear_bins": 28556,
+      "log_bins": 1885
     },
     "r0204": {
-      "bins": 10166,
-      "src": "linear"
+      "linear_bins": 10166,
+      "log_bins": 1934
     },
     "r0205": {
-      "bins": 8826,
-      "src": "linear"
+      "linear_bins": 8826,
+      "log_bins": 2525
     },
     "r0206": {
-      "bins": 13070,
-      "src": "linear"
+      "linear_bins": 13070,
+      "log_bins": 2443
     },
     "r0207": {
-      "bins": 14585,
-      "src": "linear"
+      "linear_bins": 14585,
+      "log_bins": 2293
     },
     "r0208": {
-      "bins": 67392,
-      "src": "linear"
+      "linear_bins": 67392,
+      "log_bins": 2597
     },
     "r0209": {
-      "bins": 54733,
-      "src": "linear"
+      "linear_bins": 54733,
+      "log_bins": 2616
     },
     "r0210": {
-      "bins": 101083,
-      "src": "linear"
+      "linear_bins": 101083,
+      "log_bins": 1798
     },
     "r0211": {
-      "bins": 34907,
-      "src": "linear"
+      "linear_bins": 34907,
+      "log_bins": 2674
     },
     "r0212": {
-      "bins": 21872,
-      "src": "linear"
+      "linear_bins": 21872,
+      "log_bins": 2273
     },
     "r0213": {
-      "bins": 7106,
-      "src": "linear"
+      "linear_bins": 7106,
+      "log_bins": 2266
     },
     "r0214": {
-      "bins": 12200,
-      "src": "linear"
+      "linear_bins": 12200,
+      "log_bins": 2374
     },
     "r0215": {
-      "bins": 15667,
-      "src": "linear"
+      "linear_bins": 15667,
+      "log_bins": 2450
     },
     "r0216": {
-      "bins": 19285,
-      "src": "linear"
+      "linear_bins": 19285,
+      "log_bins": 2568
     },
     "r0217": {
-      "bins": 15979,
-      "src": "linear"
+      "linear_bins": 15979,
+      "log_bins": 2582
     },
     "r0218": {
-      "bins": 12828,
-      "src": "linear"
+      "linear_bins": 12828,
+      "log_bins": 2223
     },
     "r0219": {
-      "bins": 64616,
-      "src": "linear"
+      "linear_bins": 64616,
+      "log_bins": 2439
     },
     "r0220": {
-      "bins": 17099,
-      "src": "linear"
+      "linear_bins": 17099,
+      "log_bins": 2563
     },
     "r0221": {
-      "bins": 3777,
-      "src": "linear"
+      "linear_bins": 3777,
+      "log_bins": 2532
     },
     "r0222": {
-      "bins": 9688,
-      "src": "linear"
+      "linear_bins": 9688,
+      "log_bins": 2470
     },
     "r0223": {
-      "bins": 10555,
-      "src": "linear"
+      "linear_bins": 10555,
+      "log_bins": 2662
     },
     "r0224": {
-      "bins": 7822,
-      "src": "linear"
+      "linear_bins": 7822,
+      "log_bins": 2548
     },
     "r0225": {
-      "bins": 21611,
-      "src": "linear"
+      "linear_bins": 21611,
+      "log_bins": 2540
     },
     "r0226": {
-      "bins": 9006,
-      "src": "linear"
+      "linear_bins": 9006,
+      "log_bins": 2541
     },
     "r0227": {
-      "bins": 35388,
-      "src": "linear"
+      "linear_bins": 35388,
+      "log_bins": 2485
     },
     "r0228": {
-      "bins": 16270,
-      "src": "linear"
+      "linear_bins": 16270,
+      "log_bins": 2456
     },
     "r0229": {
-      "bins": 3523,
-      "src": "linear"
+      "linear_bins": 3523,
+      "log_bins": 2556
     },
     "r0230": {
-      "bins": 4807,
-      "src": "linear"
+      "linear_bins": 4807,
+      "log_bins": 2620
     },
     "r0231": {
-      "bins": 12783,
-      "src": "linear"
+      "linear_bins": 12783,
+      "log_bins": 2577
     },
     "r0232": {
-      "bins": 38241,
-      "src": "linear"
+      "linear_bins": 38241,
+      "log_bins": 1632
     },
     "r0233": {
-      "bins": 10461,
-      "src": "linear"
+      "linear_bins": 10461,
+      "log_bins": 2575
     },
     "r0234": {
-      "bins": 9594,
-      "src": "linear"
+      "linear_bins": 9594,
+      "log_bins": 2414
     },
     "r0235": {
-      "bins": 50147,
-      "src": "linear"
+      "linear_bins": 50147,
+      "log_bins": 2505
     },
     "r0236": {
-      "bins": 14706,
-      "src": "linear"
+      "linear_bins": 14706,
+      "log_bins": 2602
     },
     "r0237": {
-      "bins": 45390,
-      "src": "linear"
+      "linear_bins": 45390,
+      "log_bins": 2609
     },
     "r0238": {
-      "bins": 11624,
-      "src": "linear"
+      "linear_bins": 11624,
+      "log_bins": 2455
     },
     "r0239": {
-      "bins": 16737,
-      "src": "linear"
+      "linear_bins": 16737,
+      "log_bins": 2435
     },
     "r0240": {
-      "bins": 6480,
-      "src": "linear"
+      "linear_bins": 6480,
+      "log_bins": 2520
     },
     "r0241": {
-      "bins": 24145,
-      "src": "linear"
+      "linear_bins": 24145,
+      "log_bins": 2588
     },
     "r0242": {
-      "bins": 16460,
-      "src": "linear"
+      "linear_bins": 16460,
+      "log_bins": 2581
     },
     "r0243": {
-      "bins": 20068,
-      "src": "linear"
+      "linear_bins": 20068,
+      "log_bins": 2323
     },
     "r0244": {
-      "bins": 7364,
-      "src": "linear"
+      "linear_bins": 7364,
+      "log_bins": 2295
     },
     "r0245": {
-      "bins": 89712,
-      "src": "linear"
+      "linear_bins": 89712,
+      "log_bins": 1648
     },
     "r0246": {
-      "bins": 20662,
-      "src": "linear"
+      "linear_bins": 20662,
+      "log_bins": 2500
     },
     "r0247": {
-      "bins": 22975,
-      "src": "linear"
+      "linear_bins": 22975,
+      "log_bins": 2482
     },
     "r0248": {
-      "bins": 10729,
-      "src": "linear"
+      "linear_bins": 10729,
+      "log_bins": 2425
     },
     "r0249": {
-      "bins": 7586,
-      "src": "linear"
+      "linear_bins": 7586,
+      "log_bins": 2151
     },
     "r0250": {
-      "bins": 46305,
-      "src": "linear"
+      "linear_bins": 46305,
+      "log_bins": 2693
     },
     "r0251": {
-      "bins": 6677,
-      "src": "linear"
+      "linear_bins": 6677,
+      "log_bins": 2617
     },
     "r0252": {
-      "bins": 26317,
-      "src": "linear"
+      "linear_bins": 26317,
+      "log_bins": 2583
     },
     "r0253": {
-      "bins": 23746,
-      "src": "linear"
+      "linear_bins": 23746,
+      "log_bins": 2539
     },
     "r0254": {
-      "bins": 23296,
-      "src": "linear"
+      "linear_bins": 23296,
+      "log_bins": 1419
     },
     "r0255": {
-      "bins": 10516,
-      "src": "linear"
+      "linear_bins": 10516,
+      "log_bins": 2621
     },
     "r0256": {
-      "bins": 14543,
-      "src": "linear"
+      "linear_bins": 14543,
+      "log_bins": 2531
     },
     "r0257": {
-      "bins": 16279,
-      "src": "linear"
+      "linear_bins": 16279,
+      "log_bins": 2185
     },
     "r0258": {
-      "bins": 19449,
-      "src": "linear"
+      "linear_bins": 19449,
+      "log_bins": 2415
     },
     "r0259": {
-      "bins": 11362,
-      "src": "linear"
+      "linear_bins": 11362,
+      "log_bins": 2289
     },
     "r0260": {
-      "bins": 35847,
-      "src": "linear"
+      "linear_bins": 35847,
+      "log_bins": 2452
     },
     "r0261": {
-      "bins": 50720,
-      "src": "linear"
+      "linear_bins": 50720,
+      "log_bins": 1681
     },
     "r0262": {
-      "bins": 7143,
-      "src": "linear"
+      "linear_bins": 7143,
+      "log_bins": 2639
     },
     "r0263": {
-      "bins": 17282,
-      "src": "linear"
+      "linear_bins": 17282,
+      "log_bins": 2659
     },
     "r0264": {
-      "bins": 97852,
-      "src": "linear"
+      "linear_bins": 97852,
+      "log_bins": 2329
     },
     "r0265": {
-      "bins": 10688,
-      "src": "linear"
+      "linear_bins": 10688,
+      "log_bins": 2440
     },
     "r0266": {
-      "bins": 6096,
-      "src": "linear"
+      "linear_bins": 6096,
+      "log_bins": 2541
     },
     "r0267": {
-      "bins": 11005,
-      "src": "linear"
+      "linear_bins": 11005,
+      "log_bins": 2464
     },
     "r0268": {
-      "bins": 25364,
-      "src": "linear"
+      "linear_bins": 25364,
+      "log_bins": 1634
     },
     "r0269": {
-      "bins": 30276,
-      "src": "linear"
+      "linear_bins": 30276,
+      "log_bins": 2432
     },
     "r0271": {
-      "bins": 154989,
-      "src": "linear"
+      "linear_bins": 154989,
+      "log_bins": 1638
     },
     "r0272": {
-      "bins": 17645,
-      "src": "linear"
+      "linear_bins": 17645,
+      "log_bins": 2294
     },
     "r0273": {
-      "bins": 29639,
-      "src": "linear"
+      "linear_bins": 29639,
+      "log_bins": 2560
     },
     "r0274": {
-      "bins": 14495,
-      "src": "linear"
+      "linear_bins": 14495,
+      "log_bins": 2487
     },
     "r0275": {
-      "bins": 114598,
-      "src": "linear"
+      "linear_bins": 114598,
+      "log_bins": 1457
     },
     "r0276": {
-      "bins": 13223,
-      "src": "linear"
+      "linear_bins": 13223,
+      "log_bins": 2628
     },
     "r0277": {
-      "bins": 63702,
-      "src": "linear"
+      "linear_bins": 63702,
+      "log_bins": 2643
     },
     "r0278": {
-      "bins": 5810,
-      "src": "linear"
+      "linear_bins": 5810,
+      "log_bins": 1432
     },
     "r0279": {
-      "bins": 18937,
-      "src": "linear"
+      "linear_bins": 18937,
+      "log_bins": 2530
     },
     "r0280": {
-      "bins": 8707,
-      "src": "linear"
+      "linear_bins": 8707,
+      "log_bins": 2678
     },
     "r0281": {
-      "bins": 13682,
-      "src": "linear"
+      "linear_bins": 13682,
+      "log_bins": 2621
     },
     "r0282": {
-      "bins": 10436,
-      "src": "linear"
+      "linear_bins": 10436,
+      "log_bins": 2603
     },
     "r0283": {
-      "bins": 9614,
-      "src": "linear"
+      "linear_bins": 9614,
+      "log_bins": 2520
     },
     "r0284": {
-      "bins": 159242,
-      "src": "linear"
+      "linear_bins": 159242,
+      "log_bins": 2576
     },
     "r0285": {
-      "bins": 9686,
-      "src": "linear"
+      "linear_bins": 9686,
+      "log_bins": 1379
     },
     "r0286": {
-      "bins": 26734,
-      "src": "linear"
+      "linear_bins": 26734,
+      "log_bins": 2691
     },
     "r0287": {
-      "bins": 56576,
-      "src": "linear"
+      "linear_bins": 56576,
+      "log_bins": 2641
     },
     "r0288": {
-      "bins": 9857,
-      "src": "linear"
+      "linear_bins": 9857,
+      "log_bins": 2552
     },
     "r0289": {
-      "bins": 13264,
-      "src": "linear"
+      "linear_bins": 13264,
+      "log_bins": 2519
     },
     "r0290": {
-      "bins": 14601,
-      "src": "linear"
+      "linear_bins": 14601,
+      "log_bins": 2588
     },
     "r0291": {
-      "bins": 21551,
-      "src": "linear"
+      "linear_bins": 21551,
+      "log_bins": 2569
     },
     "r0292": {
-      "bins": 15120,
-      "src": "linear"
+      "linear_bins": 15120,
+      "log_bins": 2495
     },
     "r0293": {
-      "bins": 37098,
-      "src": "linear"
+      "linear_bins": 37098,
+      "log_bins": 1635
     },
     "r0294": {
-      "bins": 12516,
-      "src": "linear"
+      "linear_bins": 12516,
+      "log_bins": 2498
     },
     "r0295": {
-      "bins": 17902,
-      "src": "linear"
+      "linear_bins": 17902,
+      "log_bins": 2476
     },
     "r0296": {
-      "bins": 27301,
-      "src": "linear"
+      "linear_bins": 27301,
+      "log_bins": 2660
     },
     "r0297": {
-      "bins": 43282,
-      "src": "linear"
+      "linear_bins": 43282,
+      "log_bins": 2589
     },
     "r0298": {
-      "bins": 256097,
-      "src": "linear"
+      "linear_bins": 256097,
+      "log_bins": 1260
     },
     "r0299": {
-      "bins": 23089,
-      "src": "linear"
+      "linear_bins": 23089,
+      "log_bins": 1528
     },
     "r0300": {
-      "bins": 54336,
-      "src": "linear"
+      "linear_bins": 54336,
+      "log_bins": 2623
     },
     "r0301": {
-      "bins": 5941,
-      "src": "linear"
+      "linear_bins": 5941,
+      "log_bins": 2580
     },
     "r0302": {
-      "bins": 11398,
-      "src": "linear"
+      "linear_bins": 11398,
+      "log_bins": 2553
     },
     "r0303": {
-      "bins": 7268,
-      "src": "linear"
+      "linear_bins": 7268,
+      "log_bins": 2453
     },
     "r0304": {
-      "bins": 59777,
-      "src": "linear"
+      "linear_bins": 59777,
+      "log_bins": 2769
     },
     "r0305": {
-      "bins": 32223,
-      "src": "linear"
+      "linear_bins": 32223,
+      "log_bins": 2499
     },
     "r0306": {
-      "bins": 16899,
-      "src": "linear"
+      "linear_bins": 16899,
+      "log_bins": 2409
     },
     "r0307": {
-      "bins": 8495,
-      "src": "linear"
+      "linear_bins": 8495,
+      "log_bins": 2542
     },
     "r0308": {
-      "bins": 5795,
-      "src": "linear"
+      "linear_bins": 5795,
+      "log_bins": 2356
     },
     "r0309": {
-      "bins": 18732,
-      "src": "linear"
+      "linear_bins": 18732,
+      "log_bins": 2416
     },
     "r0310": {
-      "bins": 17512,
-      "src": "linear"
+      "linear_bins": 17512,
+      "log_bins": 2477
     },
     "r0311": {
-      "bins": 9512,
-      "src": "linear"
+      "linear_bins": 9512,
+      "log_bins": 2624
     },
     "r0312": {
-      "bins": 20803,
-      "src": "linear"
+      "linear_bins": 20803,
+      "log_bins": 2453
     },
     "r0313": {
-      "bins": 16699,
-      "src": "linear"
+      "linear_bins": 16699,
+      "log_bins": 2493
     },
     "r0314": {
-      "bins": 29753,
-      "src": "linear"
+      "linear_bins": 29753,
+      "log_bins": 2293
     },
     "r0315": {
-      "bins": 7646,
-      "src": "linear"
+      "linear_bins": 7646,
+      "log_bins": 2124
     },
     "r0316": {
-      "bins": 15779,
-      "src": "linear"
+      "linear_bins": 15779,
+      "log_bins": 2454
     },
     "r0317": {
-      "bins": 8556,
-      "src": "linear"
+      "linear_bins": 8556,
+      "log_bins": 2510
     },
     "r0318": {
-      "bins": 114901,
-      "src": "linear"
+      "linear_bins": 114901,
+      "log_bins": 1491
     },
     "r0319": {
-      "bins": 87828,
-      "src": "linear"
+      "linear_bins": 87828,
+      "log_bins": 2350
     },
     "r0320": {
-      "bins": 17578,
-      "src": "linear"
+      "linear_bins": 17578,
+      "log_bins": 1508
     },
     "r0321": {
-      "bins": 6490,
-      "src": "linear"
+      "linear_bins": 6490,
+      "log_bins": 2578
     },
     "r0322": {
-      "bins": 39674,
-      "src": "linear"
+      "linear_bins": 39674,
+      "log_bins": 2779
     },
     "r0323": {
-      "bins": 7732,
-      "src": "linear"
+      "linear_bins": 7732,
+      "log_bins": 2525
     },
     "r0324": {
-      "bins": 19663,
-      "src": "linear"
+      "linear_bins": 19663,
+      "log_bins": 2561
     },
     "r0325": {
-      "bins": 22338,
-      "src": "linear"
+      "linear_bins": 22338,
+      "log_bins": 2653
     },
     "r0326": {
-      "bins": 11484,
-      "src": "linear"
+      "linear_bins": 11484,
+      "log_bins": 2579
     },
     "r0327": {
-      "bins": 9799,
-      "src": "linear"
+      "linear_bins": 9799,
+      "log_bins": 2270
     },
     "r0328": {
-      "bins": 16193,
-      "src": "linear"
+      "linear_bins": 16193,
+      "log_bins": 2561
     },
     "r0329": {
-      "bins": 25653,
-      "src": "linear"
+      "linear_bins": 25653,
+      "log_bins": 2422
     },
     "r0330": {
-      "bins": 11264,
-      "src": "linear"
+      "linear_bins": 11264,
+      "log_bins": 2575
     },
     "r0331": {
-      "bins": 6311,
-      "src": "linear"
+      "linear_bins": 6311,
+      "log_bins": 2620
     },
     "r0332": {
-      "bins": 22646,
-      "src": "linear"
+      "linear_bins": 22646,
+      "log_bins": 2464
     },
     "r0333": {
-      "bins": 14173,
-      "src": "linear"
+      "linear_bins": 14173,
+      "log_bins": 2519
     },
     "r0334": {
-      "bins": 91185,
-      "src": "linear"
+      "linear_bins": 91185,
+      "log_bins": 2618
     },
     "r0335": {
-      "bins": 22885,
-      "src": "linear"
+      "linear_bins": 22885,
+      "log_bins": 1568
     },
     "r0336": {
-      "bins": 69913,
-      "src": "linear"
+      "linear_bins": 69913,
+      "log_bins": 1916
     },
     "r0337": {
-      "bins": 43463,
-      "src": "linear"
+      "linear_bins": 43463,
+      "log_bins": 2460
     },
     "r0338": {
-      "bins": 39891,
-      "src": "linear"
+      "linear_bins": 39891,
+      "log_bins": 2486
     },
     "r0339": {
-      "bins": 34952,
-      "src": "linear"
+      "linear_bins": 34952,
+      "log_bins": 2321
     },
     "r0340": {
-      "bins": 25450,
-      "src": "linear"
+      "linear_bins": 25450,
+      "log_bins": 2567
     },
     "r0341": {
-      "bins": 9150,
-      "src": "linear"
+      "linear_bins": 9150,
+      "log_bins": 2602
     },
     "r0342": {
-      "bins": 14809,
-      "src": "linear"
+      "linear_bins": 14809,
+      "log_bins": 2568
     },
     "r0343": {
-      "bins": 12381,
-      "src": "linear"
+      "linear_bins": 12381,
+      "log_bins": 2612
     },
     "r0344": {
-      "bins": 19296,
-      "src": "linear"
+      "linear_bins": 19296,
+      "log_bins": 2673
     },
     "r0345": {
-      "bins": 21386,
-      "src": "linear"
+      "linear_bins": 21386,
+      "log_bins": 2319
     },
     "r0346": {
-      "bins": 27088,
-      "src": "linear"
+      "linear_bins": 27088,
+      "log_bins": 1635
     },
     "r0347": {
-      "bins": 31502,
-      "src": "linear"
+      "linear_bins": 31502,
+      "log_bins": 2486
     },
     "r0348": {
-      "bins": 8236,
-      "src": "linear"
+      "linear_bins": 8236,
+      "log_bins": 2602
     },
     "r0349": {
-      "bins": 17169,
-      "src": "linear"
+      "linear_bins": 17169,
+      "log_bins": 2423
     },
     "r0350": {
-      "bins": 10705,
-      "src": "linear"
+      "linear_bins": 10705,
+      "log_bins": 2564
     },
     "r0351": {
-      "bins": 23961,
-      "src": "linear"
+      "linear_bins": 23961,
+      "log_bins": 2624
     },
     "r0352": {
-      "bins": 30565,
-      "src": "linear"
+      "linear_bins": 30565,
+      "log_bins": 1586
     },
     "r0353": {
-      "bins": 15617,
-      "src": "linear"
+      "linear_bins": 15617,
+      "log_bins": 2542
     },
     "r0354": {
-      "bins": 5196,
-      "src": "linear"
+      "linear_bins": 5196,
+      "log_bins": 2244
     },
     "r0355": {
-      "bins": 10617,
-      "src": "linear"
+      "linear_bins": 10617,
+      "log_bins": 2404
     },
     "r0356": {
-      "bins": 66161,
-      "src": "linear"
+      "linear_bins": 66161,
+      "log_bins": 2716
     },
     "r0357": {
-      "bins": 18652,
-      "src": "linear"
+      "linear_bins": 18652,
+      "log_bins": 2494
     },
     "r0358": {
-      "bins": 41774,
-      "src": "linear"
+      "linear_bins": 41774,
+      "log_bins": 1620
     },
     "r0359": {
-      "bins": 26105,
-      "src": "linear"
+      "linear_bins": 26105,
+      "log_bins": 1572
     },
     "r0360": {
-      "bins": 29904,
-      "src": "linear"
+      "linear_bins": 29904,
+      "log_bins": 2635
     },
     "r0361": {
-      "bins": 41766,
-      "src": "linear"
+      "linear_bins": 41766,
+      "log_bins": 2510
     },
     "r0362": {
-      "bins": 17251,
-      "src": "linear"
+      "linear_bins": 17251,
+      "log_bins": 2347
     },
     "r0363": {
-      "bins": 28628,
-      "src": "linear"
+      "linear_bins": 28628,
+      "log_bins": 2609
     },
     "r0364": {
-      "bins": 28182,
-      "src": "linear"
+      "linear_bins": 28182,
+      "log_bins": 1459
     },
     "r0365": {
-      "bins": 13672,
-      "src": "linear"
+      "linear_bins": 13672,
+      "log_bins": 2613
     },
     "r0366": {
-      "bins": 20365,
-      "src": "linear"
+      "linear_bins": 20365,
+      "log_bins": 2655
     },
     "r0367": {
-      "bins": 8891,
-      "src": "linear"
+      "linear_bins": 8891,
+      "log_bins": 2606
     },
     "r0368": {
-      "bins": 36651,
-      "src": "linear"
+      "linear_bins": 36651,
+      "log_bins": 2513
     },
     "r0369": {
-      "bins": 11562,
-      "src": "linear"
+      "linear_bins": 11562,
+      "log_bins": 2373
     },
     "r0370": {
-      "bins": 17439,
-      "src": "linear"
+      "linear_bins": 17439,
+      "log_bins": 2386
     },
     "r0371": {
-      "bins": 11991,
-      "src": "linear"
+      "linear_bins": 11991,
+      "log_bins": 2444
     },
     "r0372": {
-      "bins": 9692,
-      "src": "linear"
+      "linear_bins": 9692,
+      "log_bins": 2487
     },
     "r0373": {
-      "bins": 6298,
-      "src": "linear"
+      "linear_bins": 6298,
+      "log_bins": 2591
     },
     "r0374": {
-      "bins": 23470,
-      "src": "linear"
+      "linear_bins": 23470,
+      "log_bins": 2368
     },
     "r0375": {
-      "bins": 13357,
-      "src": "linear"
+      "linear_bins": 13357,
+      "log_bins": 2408
     },
     "r0376": {
-      "bins": 31224,
-      "src": "linear"
+      "linear_bins": 31224,
+      "log_bins": 2470
     },
     "r0377": {
-      "bins": 78683,
-      "src": "linear"
+      "linear_bins": 78683,
+      "log_bins": 2725
     },
     "r0378": {
-      "bins": 46689,
-      "src": "linear"
+      "linear_bins": 46689,
+      "log_bins": 2482
     },
     "r0379": {
-      "bins": 79157,
-      "src": "linear"
+      "linear_bins": 79157,
+      "log_bins": 1792
     },
     "r0380": {
-      "bins": 17096,
-      "src": "linear"
+      "linear_bins": 17096,
+      "log_bins": 2546
     },
     "r0381": {
-      "bins": 21489,
-      "src": "linear"
+      "linear_bins": 21489,
+      "log_bins": 2487
     },
     "r0382": {
-      "bins": 12242,
-      "src": "linear"
+      "linear_bins": 12242,
+      "log_bins": 2544
     },
     "r0383": {
-      "bins": 10680,
-      "src": "linear"
+      "linear_bins": 10680,
+      "log_bins": 2507
     },
     "r0384": {
-      "bins": 8150,
-      "src": "linear"
+      "linear_bins": 8150,
+      "log_bins": 2323
     },
     "r0385": {
-      "bins": 6087,
-      "src": "linear"
+      "linear_bins": 6087,
+      "log_bins": 2588
     },
     "r0386": {
-      "bins": 7366,
-      "src": "linear"
+      "linear_bins": 7366,
+      "log_bins": 2610
     },
     "r0387": {
-      "bins": 11103,
-      "src": "linear"
+      "linear_bins": 11103,
+      "log_bins": 2494
     },
     "r0388": {
-      "bins": 13496,
-      "src": "linear"
+      "linear_bins": 13496,
+      "log_bins": 2606
     },
     "r0389": {
-      "bins": 17574,
-      "src": "linear"
+      "linear_bins": 17574,
+      "log_bins": 2412
     },
     "r0390": {
-      "bins": 23706,
-      "src": "linear"
+      "linear_bins": 23706,
+      "log_bins": 2561
     },
     "r0391": {
-      "bins": 6280,
-      "src": "linear"
+      "linear_bins": 6280,
+      "log_bins": 2508
     },
     "r0392": {
-      "bins": 15187,
-      "src": "linear"
+      "linear_bins": 15187,
+      "log_bins": 2417
     },
     "r0393": {
-      "bins": 20562,
-      "src": "linear"
+      "linear_bins": 20562,
+      "log_bins": 2260
     },
     "r0394": {
-      "bins": 13470,
-      "src": "linear"
+      "linear_bins": 13470,
+      "log_bins": 1639
     },
     "r0395": {
-      "bins": 65271,
-      "src": "linear"
+      "linear_bins": 65271,
+      "log_bins": 2693
     },
     "r0396": {
-      "bins": 11121,
-      "src": "linear"
+      "linear_bins": 11121,
+      "log_bins": 2346
     },
     "r0397": {
-      "bins": 17732,
-      "src": "linear"
+      "linear_bins": 17732,
+      "log_bins": 2416
     },
     "r0398": {
-      "bins": 5947,
-      "src": "linear"
+      "linear_bins": 5947,
+      "log_bins": 2574
     },
     "r0399": {
-      "bins": 10114,
-      "src": "linear"
+      "linear_bins": 10114,
+      "log_bins": 2553
     },
     "r0400": {
-      "bins": 13652,
-      "src": "linear"
+      "linear_bins": 13652,
+      "log_bins": 2415
     },
     "r0401": {
-      "bins": 5407,
-      "src": "linear"
+      "linear_bins": 5407,
+      "log_bins": 2672
     },
     "r0402": {
-      "bins": 43455,
-      "src": "linear"
+      "linear_bins": 43455,
+      "log_bins": 1907
     },
     "r0403": {
-      "bins": 13795,
-      "src": "linear"
+      "linear_bins": 13795,
+      "log_bins": 2625
     },
     "r0404": {
-      "bins": 25751,
-      "src": "linear"
+      "linear_bins": 25751,
+      "log_bins": 2371
     },
     "r0405": {
-      "bins": 12736,
-      "src": "linear"
+      "linear_bins": 12736,
+      "log_bins": 2335
     },
     "r0406": {
-      "bins": 13929,
-      "src": "linear"
+      "linear_bins": 13929,
+      "log_bins": 2585
     },
     "r0407": {
-      "bins": 7970,
-      "src": "linear"
+      "linear_bins": 7970,
+      "log_bins": 2565
     },
     "r0408": {
-      "bins": 18446,
-      "src": "linear"
+      "linear_bins": 18446,
+      "log_bins": 2576
     },
     "r0409": {
-      "bins": 24619,
-      "src": "linear"
+      "linear_bins": 24619,
+      "log_bins": 2556
     },
     "r0410": {
-      "bins": 34284,
-      "src": "linear"
+      "linear_bins": 34284,
+      "log_bins": 2766
     },
     "r0411": {
-      "bins": 8715,
-      "src": "linear"
+      "linear_bins": 8715,
+      "log_bins": 2595
     },
     "r0412": {
-      "bins": 14257,
-      "src": "linear"
+      "linear_bins": 14257,
+      "log_bins": 2418
     },
     "r0413": {
-      "bins": 15575,
-      "src": "linear"
+      "linear_bins": 15575,
+      "log_bins": 2407
     },
     "r0414": {
-      "bins": 22942,
-      "src": "linear"
+      "linear_bins": 22942,
+      "log_bins": 2318
     },
     "r0415": {
-      "bins": 12436,
-      "src": "linear"
+      "linear_bins": 12436,
+      "log_bins": 2473
     },
     "r0416": {
-      "bins": 29252,
-      "src": "linear"
+      "linear_bins": 29252,
+      "log_bins": 2407
     },
     "r0417": {
-      "bins": 20591,
-      "src": "linear"
+      "linear_bins": 20591,
+      "log_bins": 2419
     },
     "r0418": {
-      "bins": 15303,
-      "src": "linear"
+      "linear_bins": 15303,
+      "log_bins": 2526
     },
     "r0419": {
-      "bins": 51487,
-      "src": "linear"
+      "linear_bins": 51487,
+      "log_bins": 1560
     },
     "r0420": {
-      "bins": 31510,
-      "src": "linear"
+      "linear_bins": 31510,
+      "log_bins": 2507
     },
     "r0421": {
-      "bins": 23690,
-      "src": "linear"
+      "linear_bins": 23690,
+      "log_bins": 2497
     },
     "r0422": {
-      "bins": 32627,
-      "src": "linear"
+      "linear_bins": 32627,
+      "log_bins": 2318
     },
     "r0423": {
-      "bins": 10426,
-      "src": "linear"
+      "linear_bins": 10426,
+      "log_bins": 2605
     },
     "r0424": {
-      "bins": 12160,
-      "src": "linear"
+      "linear_bins": 12160,
+      "log_bins": 2672
     },
     "r0425": {
-      "bins": 9095,
-      "src": "linear"
+      "linear_bins": 9095,
+      "log_bins": 2391
     },
     "r0426": {
-      "bins": 6218,
-      "src": "linear"
+      "linear_bins": 6218,
+      "log_bins": 2359
     },
     "r0427": {
-      "bins": 18087,
-      "src": "linear"
+      "linear_bins": 18087,
+      "log_bins": 2677
     },
     "r0428": {
-      "bins": 14973,
-      "src": "linear"
+      "linear_bins": 14973,
+      "log_bins": 2503
     },
     "r0429": {
-      "bins": 53870,
-      "src": "linear"
+      "linear_bins": 53870,
+      "log_bins": 2550
     },
     "r0430": {
-      "bins": 287053,
-      "src": "linear"
+      "linear_bins": 287053,
+      "log_bins": 1794
     },
     "r0431": {
-      "bins": 31418,
-      "src": "linear"
+      "linear_bins": 31418,
+      "log_bins": 2601
     },
     "r0432": {
-      "bins": 25741,
-      "src": "linear"
+      "linear_bins": 25741,
+      "log_bins": 1118
     },
     "r0433": {
-      "bins": 14750,
-      "src": "linear"
+      "linear_bins": 14750,
+      "log_bins": 2492
     },
     "r0434": {
-      "bins": 17889,
-      "src": "linear"
+      "linear_bins": 17889,
+      "log_bins": 2403
     },
     "r0435": {
-      "bins": 47613,
-      "src": "linear"
+      "linear_bins": 47613,
+      "log_bins": 1888
     },
     "r0436": {
-      "bins": 27493,
-      "src": "linear"
+      "linear_bins": 27493,
+      "log_bins": 2695
     },
     "r0437": {
-      "bins": 9542,
-      "src": "linear"
+      "linear_bins": 9542,
+      "log_bins": 2513
     },
     "r0438": {
-      "bins": 11619,
-      "src": "linear"
+      "linear_bins": 11619,
+      "log_bins": 2523
     },
     "r0439": {
-      "bins": 10411,
-      "src": "linear"
+      "linear_bins": 10411,
+      "log_bins": 2514
     },
     "r0440": {
-      "bins": 9528,
-      "src": "linear"
+      "linear_bins": 9528,
+      "log_bins": 2519
     },
     "r0441": {
-      "bins": 12455,
-      "src": "linear"
+      "linear_bins": 12455,
+      "log_bins": 2638
     },
     "r0442": {
-      "bins": 8246,
-      "src": "linear"
+      "linear_bins": 8246,
+      "log_bins": 2602
     },
     "r0443": {
-      "bins": 6931,
-      "src": "linear"
+      "linear_bins": 6931,
+      "log_bins": 2579
     },
     "r0444": {
-      "bins": 14917,
-      "src": "linear"
+      "linear_bins": 14917,
+      "log_bins": 2646
     },
     "r0445": {
-      "bins": 8451,
-      "src": "linear"
+      "linear_bins": 8451,
+      "log_bins": 2569
     },
     "r0446": {
-      "bins": 57646,
-      "src": "linear"
+      "linear_bins": 57646,
+      "log_bins": 2515
     },
     "r0447": {
-      "bins": 7967,
-      "src": "linear"
+      "linear_bins": 7967,
+      "log_bins": 2569
     },
     "r0448": {
-      "bins": 33797,
-      "src": "linear"
+      "linear_bins": 33797,
+      "log_bins": 2579
     },
     "r0449": {
-      "bins": 2886,
-      "src": "linear"
+      "linear_bins": 2886,
+      "log_bins": 2524
     },
     "r0450": {
-      "bins": 21882,
-      "src": "linear"
+      "linear_bins": 21882,
+      "log_bins": 2516
     },
     "r0451": {
-      "bins": 4803,
-      "src": "linear"
+      "linear_bins": 4803,
+      "log_bins": 2529
     },
     "r0452": {
-      "bins": 26148,
-      "src": "linear"
+      "linear_bins": 26148,
+      "log_bins": 1779
     },
     "r0453": {
-      "bins": 163810,
-      "src": "linear"
+      "linear_bins": 163810,
+      "log_bins": 2468
     },
     "r0454": {
-      "bins": 17544,
-      "src": "linear"
+      "linear_bins": 17544,
+      "log_bins": 2678
     },
     "r0455": {
-      "bins": 28653,
-      "src": "linear"
+      "linear_bins": 28653,
+      "log_bins": 2526
     },
     "r0456": {
-      "bins": 21374,
-      "src": "linear"
+      "linear_bins": 21374,
+      "log_bins": 2437
     },
     "r0457": {
-      "bins": 12297,
-      "src": "linear"
+      "linear_bins": 12297,
+      "log_bins": 2551
     },
     "r0458": {
-      "bins": 9889,
-      "src": "linear"
+      "linear_bins": 9889,
+      "log_bins": 2438
     },
     "r0459": {
-      "bins": 11479,
-      "src": "linear"
+      "linear_bins": 11479,
+      "log_bins": 1352
     },
     "r0460": {
-      "bins": 12308,
-      "src": "linear"
+      "linear_bins": 12308,
+      "log_bins": 2502
     },
     "r0461": {
-      "bins": 9032,
-      "src": "linear"
+      "linear_bins": 9032,
+      "log_bins": 2593
     },
     "r0462": {
-      "bins": 49847,
-      "src": "linear"
+      "linear_bins": 49847,
+      "log_bins": 2466
     },
     "r0463": {
-      "bins": 15079,
-      "src": "linear"
+      "linear_bins": 15079,
+      "log_bins": 2528
     },
     "r0464": {
-      "bins": 12575,
-      "src": "linear"
+      "linear_bins": 12575,
+      "log_bins": 2421
     },
     "r0465": {
-      "bins": 9323,
-      "src": "linear"
+      "linear_bins": 9323,
+      "log_bins": 2619
     },
     "r0466": {
-      "bins": 25448,
-      "src": "linear"
+      "linear_bins": 25448,
+      "log_bins": 2629
     },
     "r0468": {
-      "bins": 18508,
-      "src": "linear"
+      "linear_bins": 18508,
+      "log_bins": 2605
     },
     "r0469": {
-      "bins": 38268,
-      "src": "linear"
+      "linear_bins": 38268,
+      "log_bins": 2619
     },
     "r0470": {
-      "bins": 15606,
-      "src": "linear"
+      "linear_bins": 15606,
+      "log_bins": 2545
     },
     "r0471": {
-      "bins": 10255,
-      "src": "linear"
+      "linear_bins": 10255,
+      "log_bins": 2589
     },
     "r0472": {
-      "bins": 15728,
-      "src": "linear"
+      "linear_bins": 15728,
+      "log_bins": 2635
     },
     "r0473": {
-      "bins": 10282,
-      "src": "linear"
+      "linear_bins": 10282,
+      "log_bins": 2223
     },
     "r0474": {
-      "bins": 5391,
-      "src": "linear"
+      "linear_bins": 5391,
+      "log_bins": 2656
     },
     "r0475": {
-      "bins": 7574,
-      "src": "linear"
+      "linear_bins": 7574,
+      "log_bins": 2508
     },
     "r0476": {
-      "bins": 89347,
-      "src": "linear"
+      "linear_bins": 89347,
+      "log_bins": 2534
     },
     "r0477": {
-      "bins": 11686,
-      "src": "linear"
+      "linear_bins": 11686,
+      "log_bins": 2625
     },
     "r0478": {
-      "bins": 7408,
-      "src": "linear"
+      "linear_bins": 7408,
+      "log_bins": 2624
     },
     "r0479": {
-      "bins": 35255,
-      "src": "linear"
+      "linear_bins": 35255,
+      "log_bins": 2605
     },
     "r0480": {
-      "bins": 27814,
-      "src": "linear"
+      "linear_bins": 27814,
+      "log_bins": 2403
     },
     "r0481": {
-      "bins": 8309,
-      "src": "linear"
+      "linear_bins": 8309,
+      "log_bins": 2549
     },
     "r0482": {
-      "bins": 6051,
-      "src": "linear"
+      "linear_bins": 6051,
+      "log_bins": 2595
     },
     "r0483": {
-      "bins": 6368,
-      "src": "linear"
+      "linear_bins": 6368,
+      "log_bins": 2595
     },
     "r0484": {
-      "bins": 9610,
-      "src": "linear"
+      "linear_bins": 9610,
+      "log_bins": 2427
     },
     "r0485": {
-      "bins": 5181,
-      "src": "linear"
+      "linear_bins": 5181,
+      "log_bins": 2274
     },
     "r0486": {
-      "bins": 24148,
-      "src": "linear"
+      "linear_bins": 24148,
+      "log_bins": 2569
     },
     "r0487": {
-      "bins": 31257,
-      "src": "linear"
+      "linear_bins": 31257,
+      "log_bins": 2489
     },
     "r0488": {
-      "bins": 25839,
-      "src": "linear"
+      "linear_bins": 25839,
+      "log_bins": 2306
     },
     "r0489": {
-      "bins": 9961,
-      "src": "linear"
+      "linear_bins": 9961,
+      "log_bins": 2275
     },
     "r0490": {
-      "bins": 14850,
-      "src": "linear"
+      "linear_bins": 14850,
+      "log_bins": 2610
     },
     "r0491": {
-      "bins": 17473,
-      "src": "linear"
+      "linear_bins": 17473,
+      "log_bins": 2598
     },
     "r0492": {
-      "bins": 6347,
-      "src": "linear"
+      "linear_bins": 6347,
+      "log_bins": 2397
     },
     "r0493": {
-      "bins": 7882,
-      "src": "linear"
+      "linear_bins": 7882,
+      "log_bins": 2523
     },
     "r0494": {
-      "bins": 18330,
-      "src": "linear"
+      "linear_bins": 18330,
+      "log_bins": 2537
     },
     "r0495": {
-      "bins": 11196,
-      "src": "linear"
+      "linear_bins": 11196,
+      "log_bins": 2505
     },
     "r0496": {
-      "bins": 11715,
-      "src": "linear"
+      "linear_bins": 11715,
+      "log_bins": 2493
     },
     "r0497": {
-      "bins": 5518,
-      "src": "linear"
+      "linear_bins": 5518,
+      "log_bins": 2344
     },
     "r0498": {
-      "bins": 24981,
-      "src": "linear"
+      "linear_bins": 24981,
+      "log_bins": 2500
     },
     "r0499": {
-      "bins": 14268,
-      "src": "linear"
+      "linear_bins": 14268,
+      "log_bins": 2422
     },
     "r0500": {
-      "bins": 41821,
-      "src": "linear"
+      "linear_bins": 41821,
+      "log_bins": 1516
     },
     "r0501": {
-      "bins": 10593,
-      "src": "linear"
+      "linear_bins": 10593,
+      "log_bins": 1862
     },
     "r0502": {
-      "bins": 22654,
-      "src": "linear"
+      "linear_bins": 22654,
+      "log_bins": 1543
     },
     "r0503": {
-      "bins": 552269,
-      "src": "linear"
+      "linear_bins": 552269,
+      "log_bins": 1327
     },
     "r0504": {
-      "bins": 10287,
-      "src": "linear"
+      "linear_bins": 10287,
+      "log_bins": 2225
     },
     "r0505": {
-      "bins": 6329,
-      "src": "linear"
+      "linear_bins": 6329,
+      "log_bins": 2646
     },
     "r0506": {
-      "bins": 12911,
-      "src": "linear"
+      "linear_bins": 12911,
+      "log_bins": 2316
     },
     "r0507": {
-      "bins": 9079,
-      "src": "linear"
+      "linear_bins": 9079,
+      "log_bins": 2602
     },
     "r0508": {
-      "bins": 13053,
-      "src": "linear"
+      "linear_bins": 13053,
+      "log_bins": 2394
     },
     "r0509": {
-      "bins": 36488,
-      "src": "linear"
+      "linear_bins": 36488,
+      "log_bins": 2780
     },
     "r0510": {
-      "bins": 7623,
-      "src": "linear"
+      "linear_bins": 7623,
+      "log_bins": 2499
     },
     "r0511": {
-      "bins": 17740,
-      "src": "linear"
+      "linear_bins": 17740,
+      "log_bins": 2499
     },
     "r0512": {
-      "bins": 26151,
-      "src": "linear"
+      "linear_bins": 26151,
+      "log_bins": 1619
     },
     "r0513": {
-      "bins": 7785,
-      "src": "linear"
+      "linear_bins": 7785,
+      "log_bins": 2514
     },
     "r0514": {
-      "bins": 17363,
-      "src": "linear"
+      "linear_bins": 17363,
+      "log_bins": 1443
     },
     "r0515": {
-      "bins": 6717,
-      "src": "linear"
+      "linear_bins": 6717,
+      "log_bins": 2632
     },
     "r0516": {
-      "bins": 10892,
-      "src": "linear"
+      "linear_bins": 10892,
+      "log_bins": 2516
     },
     "r0517": {
-      "bins": 230484,
-      "src": "linear"
+      "linear_bins": 230484,
+      "log_bins": 2718
     },
     "r0518": {
-      "bins": 30641,
-      "src": "linear"
+      "linear_bins": 30641,
+      "log_bins": 2341
     },
     "r0520": {
-      "bins": 6901,
-      "src": "linear"
+      "linear_bins": 6901,
+      "log_bins": 2669
     },
     "r0521": {
-      "bins": 9121,
-      "src": "linear"
+      "linear_bins": 9121,
+      "log_bins": 2622
     },
     "r0522": {
-      "bins": 9484,
-      "src": "linear"
+      "linear_bins": 9484,
+      "log_bins": 2349
     },
     "r0523": {
-      "bins": 7073,
-      "src": "linear"
+      "linear_bins": 7073,
+      "log_bins": 2455
     },
     "r0524": {
-      "bins": 8054,
-      "src": "linear"
+      "linear_bins": 8054,
+      "log_bins": 2306
     },
     "r0525": {
-      "bins": 26231,
-      "src": "linear"
+      "linear_bins": 26231,
+      "log_bins": 2545
     },
     "r0526": {
-      "bins": 14706,
-      "src": "linear"
+      "linear_bins": 14706,
+      "log_bins": 1111
     },
     "r0527": {
-      "bins": 7317,
-      "src": "linear"
+      "linear_bins": 7317,
+      "log_bins": 2601
     },
     "r0528": {
-      "bins": 67692,
-      "src": "linear"
+      "linear_bins": 67692,
+      "log_bins": 2548
     },
     "r0529": {
-      "bins": 30338,
-      "src": "linear"
+      "linear_bins": 30338,
+      "log_bins": 1648
     },
     "r0530": {
-      "bins": 16793,
-      "src": "linear"
+      "linear_bins": 16793,
+      "log_bins": 2357
     },
     "r0531": {
-      "bins": 29541,
-      "src": "linear"
+      "linear_bins": 29541,
+      "log_bins": 2526
     },
     "r0532": {
-      "bins": 14534,
-      "src": "linear"
+      "linear_bins": 14534,
+      "log_bins": 2424
     },
     "r0534": {
-      "bins": 15686,
-      "src": "linear"
+      "linear_bins": 15686,
+      "log_bins": 1424
     },
     "r0535": {
-      "bins": 44169,
-      "src": "linear"
+      "linear_bins": 44169,
+      "log_bins": 1604
     },
     "r0536": {
-      "bins": 7585,
-      "src": "linear"
+      "linear_bins": 7585,
+      "log_bins": 2456
     },
     "r0537": {
-      "bins": 22293,
-      "src": "linear"
+      "linear_bins": 22293,
+      "log_bins": 1536
     },
     "r0538": {
-      "bins": 13743,
-      "src": "linear"
+      "linear_bins": 13743,
+      "log_bins": 2425
     },
     "r0539": {
-      "bins": 46182,
-      "src": "linear"
+      "linear_bins": 46182,
+      "log_bins": 1782
     },
     "r0540": {
-      "bins": 13753,
-      "src": "linear"
+      "linear_bins": 13753,
+      "log_bins": 2554
     },
     "r0541": {
-      "bins": 20302,
-      "src": "linear"
+      "linear_bins": 20302,
+      "log_bins": 2590
     },
     "r0542": {
-      "bins": 79149,
-      "src": "linear"
+      "linear_bins": 79149,
+      "log_bins": 2747
     },
     "r0543": {
-      "bins": 11751,
-      "src": "linear"
+      "linear_bins": 11751,
+      "log_bins": 2543
     },
     "r0544": {
-      "bins": 11557,
-      "src": "linear"
+      "linear_bins": 11557,
+      "log_bins": 2171
     },
     "r0545": {
-      "bins": 17406,
-      "src": "linear"
+      "linear_bins": 17406,
+      "log_bins": 2507
     },
     "r0546": {
-      "bins": 8726,
-      "src": "linear"
+      "linear_bins": 8726,
+      "log_bins": 2552
     },
     "r0547": {
-      "bins": 21140,
-      "src": "linear"
+      "linear_bins": 21140,
+      "log_bins": 2507
     },
     "r0548": {
-      "bins": 12725,
-      "src": "linear"
+      "linear_bins": 12725,
+      "log_bins": 2290
     },
     "r0549": {
-      "bins": 43145,
-      "src": "linear"
+      "linear_bins": 43145,
+      "log_bins": 1296
     },
     "r0550": {
-      "bins": 54825,
-      "src": "linear"
+      "linear_bins": 54825,
+      "log_bins": 1687
     },
     "r0551": {
-      "bins": 20022,
-      "src": "linear"
+      "linear_bins": 20022,
+      "log_bins": 2437
     },
     "r0552": {
-      "bins": 67145,
-      "src": "linear"
+      "linear_bins": 67145,
+      "log_bins": 1556
     },
     "r0553": {
-      "bins": 66595,
-      "src": "linear"
+      "linear_bins": 66595,
+      "log_bins": 1601
     },
     "r0554": {
-      "bins": 5496,
-      "src": "linear"
+      "linear_bins": 5496,
+      "log_bins": 2679
     },
     "r0555": {
-      "bins": 51457,
-      "src": "linear"
+      "linear_bins": 51457,
+      "log_bins": 2688
     },
     "r0556": {
-      "bins": 4519,
-      "src": "linear"
+      "linear_bins": 4519,
+      "log_bins": 2389
     },
     "r0557": {
-      "bins": 16785,
-      "src": "linear"
+      "linear_bins": 16785,
+      "log_bins": 1460
     },
     "r0558": {
-      "bins": 19424,
-      "src": "linear"
+      "linear_bins": 19424,
+      "log_bins": 2303
     },
     "r0559": {
-      "bins": 17357,
-      "src": "linear"
+      "linear_bins": 17357,
+      "log_bins": 2603
     },
     "r0560": {
-      "bins": 29681,
-      "src": "linear"
+      "linear_bins": 29681,
+      "log_bins": 2477
     },
     "r0561": {
-      "bins": 13316,
-      "src": "linear"
+      "linear_bins": 13316,
+      "log_bins": 2674
     },
     "r0562": {
-      "bins": 10694,
-      "src": "linear"
+      "linear_bins": 10694,
+      "log_bins": 2613
     },
     "r0563": {
-      "bins": 5034,
-      "src": "linear"
+      "linear_bins": 5034,
+      "log_bins": 2414
     },
     "r0564": {
-      "bins": 188841,
-      "src": "linear"
+      "linear_bins": 188841,
+      "log_bins": 5629
     },
     "r0565": {
-      "bins": 13301,
-      "src": "linear"
+      "linear_bins": 13301,
+      "log_bins": 2587
     },
     "r0566": {
-      "bins": 17144,
-      "src": "linear"
+      "linear_bins": 17144,
+      "log_bins": 2332
     },
     "r0567": {
-      "bins": 6477,
-      "src": "linear"
+      "linear_bins": 6477,
+      "log_bins": 2593
     },
     "r0568": {
-      "bins": 6699,
-      "src": "linear"
+      "linear_bins": 6699,
+      "log_bins": 2499
     },
     "r0569": {
-      "bins": 36933,
-      "src": "linear"
+      "linear_bins": 36933,
+      "log_bins": 2521
     },
     "r0570": {
-      "bins": 38356,
-      "src": "linear"
+      "linear_bins": 38356,
+      "log_bins": 2421
     },
     "r0571": {
-      "bins": 5505,
-      "src": "linear"
+      "linear_bins": 5505,
+      "log_bins": 2424
     },
     "r0572": {
-      "bins": 24821,
-      "src": "linear"
+      "linear_bins": 24821,
+      "log_bins": 2744
     },
     "r0573": {
-      "bins": 5169,
-      "src": "linear"
+      "linear_bins": 5169,
+      "log_bins": 2706
     },
     "r0574": {
-      "bins": 28419,
-      "src": "linear"
+      "linear_bins": 28419,
+      "log_bins": 2276
     },
     "r0575": {
-      "bins": 11591,
-      "src": "linear"
+      "linear_bins": 11591,
+      "log_bins": 2547
     },
     "r0576": {
-      "bins": 51236,
-      "src": "linear"
+      "linear_bins": 51236,
+      "log_bins": 1798
     },
     "r0577": {
-      "bins": 10012,
-      "src": "linear"
+      "linear_bins": 10012,
+      "log_bins": 2189
     },
     "r0578": {
-      "bins": 3248,
-      "src": "linear"
+      "linear_bins": 3248,
+      "log_bins": 2497
     },
     "r0579": {
-      "bins": 21662,
-      "src": "linear"
+      "linear_bins": 21662,
+      "log_bins": 1492
     },
     "r0580": {
-      "bins": 28807,
-      "src": "linear"
+      "linear_bins": 28807,
+      "log_bins": 2284
     },
     "r0581": {
-      "bins": 24120,
-      "src": "linear"
+      "linear_bins": 24120,
+      "log_bins": 2761
     },
     "r0582": {
-      "bins": 28377,
-      "src": "linear"
+      "linear_bins": 28377,
+      "log_bins": 2313
     },
     "r0583": {
-      "bins": 8821,
-      "src": "linear"
+      "linear_bins": 8821,
+      "log_bins": 2630
     },
     "r0584": {
-      "bins": 20747,
-      "src": "linear"
+      "linear_bins": 20747,
+      "log_bins": 2304
     },
     "r0585": {
-      "bins": 6682,
-      "src": "linear"
+      "linear_bins": 6682,
+      "log_bins": 2532
     },
     "r0586": {
-      "bins": 44256,
-      "src": "linear"
+      "linear_bins": 44256,
+      "log_bins": 2616
     },
     "r0587": {
-      "bins": 11821,
-      "src": "linear"
+      "linear_bins": 11821,
+      "log_bins": 2399
     },
     "r0588": {
-      "bins": 4835,
-      "src": "linear"
+      "linear_bins": 4835,
+      "log_bins": 2628
     },
     "r0589": {
-      "bins": 7095,
-      "src": "linear"
+      "linear_bins": 7095,
+      "log_bins": 2480
     },
     "r0590": {
-      "bins": 16998,
-      "src": "linear"
+      "linear_bins": 16998,
+      "log_bins": 2521
     },
     "r0591": {
-      "bins": 12561,
-      "src": "linear"
+      "linear_bins": 12561,
+      "log_bins": 2528
     },
     "r0592": {
-      "bins": 18162,
-      "src": "linear"
+      "linear_bins": 18162,
+      "log_bins": 2448
     },
     "r0593": {
-      "bins": 10527,
-      "src": "linear"
+      "linear_bins": 10527,
+      "log_bins": 2568
     },
     "r0594": {
-      "bins": 21510,
-      "src": "linear"
+      "linear_bins": 21510,
+      "log_bins": 2307
     },
     "r0595": {
-      "bins": 16351,
-      "src": "linear"
+      "linear_bins": 16351,
+      "log_bins": 2554
     },
     "r0596": {
-      "bins": 54952,
-      "src": "linear"
+      "linear_bins": 54952,
+      "log_bins": 1504
     },
     "r0597": {
-      "bins": 40308,
-      "src": "linear"
+      "linear_bins": 40308,
+      "log_bins": 2635
     },
     "r0598": {
-      "bins": 9695,
-      "src": "linear"
+      "linear_bins": 9695,
+      "log_bins": 2520
     },
     "r0599": {
-      "bins": 10404,
-      "src": "linear"
+      "linear_bins": 10404,
+      "log_bins": 2430
     },
     "r0600": {
-      "bins": 59222,
-      "src": "linear"
+      "linear_bins": 59222,
+      "log_bins": 1880
     },
     "r0601": {
-      "bins": 18812,
-      "src": "linear"
+      "linear_bins": 18812,
+      "log_bins": 2490
     },
     "r0602": {
-      "bins": 14105,
-      "src": "linear"
+      "linear_bins": 14105,
+      "log_bins": 2473
     },
     "r0603": {
-      "bins": 14254,
-      "src": "linear"
+      "linear_bins": 14254,
+      "log_bins": 2494
     },
     "r0604": {
-      "bins": 11097,
-      "src": "linear"
+      "linear_bins": 11097,
+      "log_bins": 2031
     },
     "r0605": {
-      "bins": 29047,
-      "src": "linear"
+      "linear_bins": 29047,
+      "log_bins": 2785
     },
     "r0606": {
-      "bins": 8107,
-      "src": "linear"
+      "linear_bins": 8107,
+      "log_bins": 2285
     },
     "r0607": {
-      "bins": 8114,
-      "src": "linear"
+      "linear_bins": 8114,
+      "log_bins": 2536
     },
     "r0608": {
-      "bins": 9867,
-      "src": "linear"
+      "linear_bins": 9867,
+      "log_bins": 2494
     },
     "r0609": {
-      "bins": 34461,
-      "src": "linear"
+      "linear_bins": 34461,
+      "log_bins": 2261
     },
     "r0610": {
-      "bins": 26261,
-      "src": "linear"
+      "linear_bins": 26261,
+      "log_bins": 2457
     },
     "r0611": {
-      "bins": 14151,
-      "src": "linear"
+      "linear_bins": 14151,
+      "log_bins": 2691
     },
     "r0612": {
-      "bins": 17211,
-      "src": "linear"
+      "linear_bins": 17211,
+      "log_bins": 2546
     },
     "r0613": {
-      "bins": 9551,
-      "src": "linear"
+      "linear_bins": 9551,
+      "log_bins": 2556
     },
     "r0614": {
-      "bins": 32429,
-      "src": "linear"
+      "linear_bins": 32429,
+      "log_bins": 2406
     },
     "r0615": {
-      "bins": 5709,
-      "src": "linear"
+      "linear_bins": 5709,
+      "log_bins": 2459
     },
     "r0616": {
-      "bins": 52323,
-      "src": "linear"
+      "linear_bins": 52323,
+      "log_bins": 2465
     },
     "r0617": {
-      "bins": 231618,
-      "src": "linear"
+      "linear_bins": 231618,
+      "log_bins": 1484
     },
     "r0618": {
-      "bins": 5703,
-      "src": "linear"
+      "linear_bins": 5703,
+      "log_bins": 2360
     },
     "r0619": {
-      "bins": 31960,
-      "src": "linear"
+      "linear_bins": 31960,
+      "log_bins": 1560
     },
     "r0620": {
-      "bins": 8393,
-      "src": "linear"
+      "linear_bins": 8393,
+      "log_bins": 2293
     },
     "r0621": {
-      "bins": 18426,
-      "src": "linear"
+      "linear_bins": 18426,
+      "log_bins": 2467
     },
     "r0622": {
-      "bins": 5925,
-      "src": "linear"
+      "linear_bins": 5925,
+      "log_bins": 2613
     },
     "r0623": {
-      "bins": 10336,
-      "src": "linear"
+      "linear_bins": 10336,
+      "log_bins": 2572
     },
     "r0624": {
-      "bins": 7373,
-      "src": "linear"
+      "linear_bins": 7373,
+      "log_bins": 2544
     },
     "r0625": {
-      "bins": 32588,
-      "src": "linear"
+      "linear_bins": 32588,
+      "log_bins": 2640
     },
     "r0626": {
-      "bins": 5282,
-      "src": "linear"
+      "linear_bins": 5282,
+      "log_bins": 2719
     },
     "r0627": {
-      "bins": 16928,
-      "src": "linear"
+      "linear_bins": 16928,
+      "log_bins": 2496
     },
     "r0628": {
-      "bins": 24886,
-      "src": "linear"
+      "linear_bins": 24886,
+      "log_bins": 1973
     },
     "r0629": {
-      "bins": 22942,
-      "src": "linear"
+      "linear_bins": 22942,
+      "log_bins": 2554
     },
     "r0630": {
-      "bins": 7868,
-      "src": "linear"
+      "linear_bins": 7868,
+      "log_bins": 2317
     },
     "r0631": {
-      "bins": 17668,
-      "src": "linear"
+      "linear_bins": 17668,
+      "log_bins": 2503
     },
     "r0632": {
-      "bins": 18892,
-      "src": "linear"
+      "linear_bins": 18892,
+      "log_bins": 2625
     },
     "r0633": {
-      "bins": 48274,
-      "src": "linear"
+      "linear_bins": 48274,
+      "log_bins": 1665
     },
     "r0634": {
-      "bins": 47331,
-      "src": "linear"
+      "linear_bins": 47331,
+      "log_bins": 1680
     },
     "r0635": {
-      "bins": 23143,
-      "src": "linear"
+      "linear_bins": 23143,
+      "log_bins": 2335
     },
     "r0636": {
-      "bins": 15130,
-      "src": "linear"
+      "linear_bins": 15130,
+      "log_bins": 2652
     },
     "r0637": {
-      "bins": 11576,
-      "src": "linear"
+      "linear_bins": 11576,
+      "log_bins": 2240
     },
     "r0638": {
-      "bins": 10402,
-      "src": "linear"
+      "linear_bins": 10402,
+      "log_bins": 2502
     },
     "r0639": {
-      "bins": 44308,
-      "src": "linear"
+      "linear_bins": 44308,
+      "log_bins": 1964
     },
     "r0640": {
-      "bins": 6897,
-      "src": "linear"
+      "linear_bins": 6897,
+      "log_bins": 2339
     },
     "r0641": {
-      "bins": 72359,
-      "src": "linear"
+      "linear_bins": 72359,
+      "log_bins": 2108
     },
     "r0642": {
-      "bins": 5970,
-      "src": "linear"
+      "linear_bins": 5970,
+      "log_bins": 2607
     },
     "r0643": {
-      "bins": 10429,
-      "src": "linear"
+      "linear_bins": 10429,
+      "log_bins": 2527
     },
     "r0644": {
-      "bins": 9769,
-      "src": "linear"
+      "linear_bins": 9769,
+      "log_bins": 2590
     },
     "r0645": {
-      "bins": 19226,
-      "src": "linear"
+      "linear_bins": 19226,
+      "log_bins": 2652
     },
     "r0646": {
-      "bins": 199384,
-      "src": "linear"
+      "linear_bins": 199384,
+      "log_bins": 1804
     },
     "r0647": {
-      "bins": 22056,
-      "src": "linear"
+      "linear_bins": 22056,
+      "log_bins": 2394
     },
     "r0648": {
-      "bins": 22881,
-      "src": "linear"
+      "linear_bins": 22881,
+      "log_bins": 2557
     },
     "r0649": {
-      "bins": 32106,
-      "src": "linear"
+      "linear_bins": 32106,
+      "log_bins": 1809
     },
     "r0650": {
-      "bins": 8687,
-      "src": "linear"
+      "linear_bins": 8687,
+      "log_bins": 2463
     },
     "r0651": {
-      "bins": 6490,
-      "src": "linear"
+      "linear_bins": 6490,
+      "log_bins": 2573
     },
     "r0652": {
-      "bins": 18178,
-      "src": "linear"
+      "linear_bins": 18178,
+      "log_bins": 2266
     },
     "r0653": {
-      "bins": 51707,
-      "src": "linear"
+      "linear_bins": 51707,
+      "log_bins": 2504
     },
     "r0654": {
-      "bins": 10489,
-      "src": "linear"
+      "linear_bins": 10489,
+      "log_bins": 2491
     },
     "r0655": {
-      "bins": 6781,
-      "src": "linear"
+      "linear_bins": 6781,
+      "log_bins": 2602
     },
     "r0656": {
-      "bins": 17395,
-      "src": "linear"
+      "linear_bins": 17395,
+      "log_bins": 2422
     },
     "r0657": {
-      "bins": 8895,
-      "src": "linear"
+      "linear_bins": 8895,
+      "log_bins": 2606
     },
     "r0658": {
-      "bins": 62336,
-      "src": "linear"
+      "linear_bins": 62336,
+      "log_bins": 2387
     },
     "r0659": {
-      "bins": 16132,
-      "src": "linear"
+      "linear_bins": 16132,
+      "log_bins": 2427
     },
     "r0660": {
-      "bins": 30543,
-      "src": "linear"
+      "linear_bins": 30543,
+      "log_bins": 2634
     },
     "r0661": {
-      "bins": 6773,
-      "src": "linear"
+      "linear_bins": 6773,
+      "log_bins": 2492
     },
     "r0662": {
-      "bins": 39939,
-      "src": "linear"
+      "linear_bins": 39939,
+      "log_bins": 2172
     },
     "r0663": {
-      "bins": 6059,
-      "src": "linear"
+      "linear_bins": 6059,
+      "log_bins": 2669
     },
     "r0664": {
-      "bins": 35661,
-      "src": "linear"
+      "linear_bins": 35661,
+      "log_bins": 2565
     },
     "r0665": {
-      "bins": 27023,
-      "src": "linear"
+      "linear_bins": 27023,
+      "log_bins": 2220
     },
     "r0666": {
-      "bins": 64257,
-      "src": "linear"
+      "linear_bins": 64257,
+      "log_bins": 1461
     },
     "r0667": {
-      "bins": 9259,
-      "src": "linear"
+      "linear_bins": 9259,
+      "log_bins": 2421
     },
     "r0668": {
-      "bins": 7230,
-      "src": "linear"
+      "linear_bins": 7230,
+      "log_bins": 2367
     },
     "r0669": {
-      "bins": 11507,
-      "src": "linear"
+      "linear_bins": 11507,
+      "log_bins": 2109
     },
     "r0670": {
-      "bins": 35764,
-      "src": "linear"
+      "linear_bins": 35764,
+      "log_bins": 2670
     },
     "r0671": {
-      "bins": 11237,
-      "src": "linear"
+      "linear_bins": 11237,
+      "log_bins": 2457
     },
     "r0672": {
-      "bins": 25238,
-      "src": "linear"
+      "linear_bins": 25238,
+      "log_bins": 2440
     },
     "r0673": {
-      "bins": 7259,
-      "src": "linear"
+      "linear_bins": 7259,
+      "log_bins": 2611
     },
     "r0674": {
-      "bins": 13591,
-      "src": "linear"
+      "linear_bins": 13591,
+      "log_bins": 2623
     },
     "r0675": {
-      "bins": 8774,
-      "src": "linear"
+      "linear_bins": 8774,
+      "log_bins": 2513
     },
     "r0676": {
-      "bins": 25709,
-      "src": "linear"
+      "linear_bins": 25709,
+      "log_bins": 2617
     },
     "r0677": {
-      "bins": 5546,
-      "src": "linear"
+      "linear_bins": 5546,
+      "log_bins": 2655
     },
     "r0678": {
-      "bins": 11230,
-      "src": "linear"
+      "linear_bins": 11230,
+      "log_bins": 2240
     },
     "r0679": {
-      "bins": 15036,
-      "src": "linear"
+      "linear_bins": 15036,
+      "log_bins": 2522
     },
     "r0680": {
-      "bins": 6916,
-      "src": "linear"
+      "linear_bins": 6916,
+      "log_bins": 2593
     },
     "r0681": {
-      "bins": 17641,
-      "src": "linear"
+      "linear_bins": 17641,
+      "log_bins": 2522
     },
     "r0682": {
-      "bins": 10837,
-      "src": "linear"
+      "linear_bins": 10837,
+      "log_bins": 2475
     },
     "r0683": {
-      "bins": 19954,
-      "src": "linear"
+      "linear_bins": 19954,
+      "log_bins": 2738
     },
     "r0684": {
-      "bins": 14663,
-      "src": "linear"
+      "linear_bins": 14663,
+      "log_bins": 2538
     },
     "r0685": {
-      "bins": 16378,
-      "src": "linear"
+      "linear_bins": 16378,
+      "log_bins": 1456
     },
     "r0686": {
-      "bins": 17743,
-      "src": "linear"
+      "linear_bins": 17743,
+      "log_bins": 1488
     },
     "r0687": {
-      "bins": 37437,
-      "src": "linear"
+      "linear_bins": 37437,
+      "log_bins": 2843
     },
     "r0688": {
-      "bins": 29345,
-      "src": "linear"
+      "linear_bins": 29345,
+      "log_bins": 1611
     },
     "r0689": {
-      "bins": 7265,
-      "src": "linear"
+      "linear_bins": 7265,
+      "log_bins": 2556
     },
     "r0690": {
-      "bins": 20906,
-      "src": "linear"
+      "linear_bins": 20906,
+      "log_bins": 2506
     },
     "r0691": {
-      "bins": 31275,
-      "src": "linear"
+      "linear_bins": 31275,
+      "log_bins": 2424
     },
     "r0692": {
-      "bins": 6893,
-      "src": "linear"
+      "linear_bins": 6893,
+      "log_bins": 2650
     },
     "r0693": {
-      "bins": 9490,
-      "src": "linear"
+      "linear_bins": 9490,
+      "log_bins": 2566
     },
     "r0694": {
-      "bins": 17420,
-      "src": "linear"
+      "linear_bins": 17420,
+      "log_bins": 2554
     },
     "r0695": {
-      "bins": 8500,
-      "src": "linear"
+      "linear_bins": 8500,
+      "log_bins": 1529
     },
     "r0696": {
-      "bins": 53010,
-      "src": "linear"
+      "linear_bins": 53010,
+      "log_bins": 2446
     },
     "r0697": {
-      "bins": 9953,
-      "src": "linear"
+      "linear_bins": 9953,
+      "log_bins": 2527
     },
     "r0698": {
-      "bins": 20700,
-      "src": "linear"
+      "linear_bins": 20700,
+      "log_bins": 2558
     },
     "r0699": {
-      "bins": 40109,
-      "src": "linear"
+      "linear_bins": 40109,
+      "log_bins": 2420
     },
     "r0700": {
-      "bins": 10455,
-      "src": "linear"
+      "linear_bins": 10455,
+      "log_bins": 2481
     },
     "r0701": {
-      "bins": 48631,
-      "src": "linear"
+      "linear_bins": 48631,
+      "log_bins": 1586
     },
     "r0702": {
-      "bins": 5855,
-      "src": "linear"
+      "linear_bins": 5855,
+      "log_bins": 2369
     },
     "r0703": {
-      "bins": 19501,
-      "src": "linear"
+      "linear_bins": 19501,
+      "log_bins": 2354
     },
     "r0704": {
-      "bins": 22387,
-      "src": "linear"
+      "linear_bins": 22387,
+      "log_bins": 2527
     },
     "r0705": {
-      "bins": 7393,
-      "src": "linear"
+      "linear_bins": 7393,
+      "log_bins": 2552
     },
     "r0706": {
-      "bins": 12379,
-      "src": "linear"
+      "linear_bins": 12379,
+      "log_bins": 2193
     },
     "r0707": {
-      "bins": 12866,
-      "src": "linear"
+      "linear_bins": 12866,
+      "log_bins": 2558
     },
     "r0708": {
-      "bins": 9377,
-      "src": "linear"
+      "linear_bins": 9377,
+      "log_bins": 2616
     },
     "r0709": {
-      "bins": 11156,
-      "src": "linear"
+      "linear_bins": 11156,
+      "log_bins": 2541
     },
     "r0710": {
-      "bins": 13910,
-      "src": "linear"
+      "linear_bins": 13910,
+      "log_bins": 2573
     },
     "r0711": {
-      "bins": 10712,
-      "src": "linear"
+      "linear_bins": 10712,
+      "log_bins": 2524
     },
     "r0712": {
-      "bins": 46170,
-      "src": "linear"
+      "linear_bins": 46170,
+      "log_bins": 1809
     },
     "r0714": {
-      "bins": 45927,
-      "src": "linear"
+      "linear_bins": 45927,
+      "log_bins": 2720
     },
     "r0715": {
-      "bins": 15806,
-      "src": "linear"
+      "linear_bins": 15806,
+      "log_bins": 2686
     },
     "r0716": {
-      "bins": 27818,
-      "src": "linear"
+      "linear_bins": 27818,
+      "log_bins": 2797
     },
     "r0717": {
-      "bins": 38239,
-      "src": "linear"
+      "linear_bins": 38239,
+      "log_bins": 2040
     },
     "r0718": {
-      "bins": 22603,
-      "src": "linear"
+      "linear_bins": 22603,
+      "log_bins": 2490
     },
     "r0719": {
-      "bins": 22563,
-      "src": "linear"
+      "linear_bins": 22563,
+      "log_bins": 2423
     },
     "r0720": {
-      "bins": 23711,
-      "src": "linear"
+      "linear_bins": 23711,
+      "log_bins": 2508
     },
     "r0721": {
-      "bins": 73790,
-      "src": "linear"
+      "linear_bins": 73790,
+      "log_bins": 2795
     },
     "r0722": {
-      "bins": 29335,
-      "src": "linear"
+      "linear_bins": 29335,
+      "log_bins": 2422
     },
     "r0723": {
-      "bins": 15819,
-      "src": "linear"
+      "linear_bins": 15819,
+      "log_bins": 2505
     },
     "r0724": {
-      "bins": 30130,
-      "src": "linear"
+      "linear_bins": 30130,
+      "log_bins": 1603
     },
     "r0725": {
-      "bins": 12992,
-      "src": "linear"
+      "linear_bins": 12992,
+      "log_bins": 2529
     },
     "r0726": {
-      "bins": 8761,
-      "src": "linear"
+      "linear_bins": 8761,
+      "log_bins": 2608
     },
     "r0727": {
-      "bins": 34366,
-      "src": "linear"
+      "linear_bins": 34366,
+      "log_bins": 2589
     },
     "r0728": {
-      "bins": 12327,
-      "src": "linear"
+      "linear_bins": 12327,
+      "log_bins": 2503
     },
     "r0729": {
-      "bins": 22894,
-      "src": "linear"
+      "linear_bins": 22894,
+      "log_bins": 2495
     },
     "r0730": {
-      "bins": 7776,
-      "src": "linear"
+      "linear_bins": 7776,
+      "log_bins": 2165
     },
     "r0731": {
-      "bins": 5649,
-      "src": "linear"
+      "linear_bins": 5649,
+      "log_bins": 2418
     },
     "r0732": {
-      "bins": 18925,
-      "src": "linear"
+      "linear_bins": 18925,
+      "log_bins": 2332
     },
     "r0733": {
-      "bins": 21946,
-      "src": "linear"
+      "linear_bins": 21946,
+      "log_bins": 2357
     },
     "r0734": {
-      "bins": 11102,
-      "src": "linear"
+      "linear_bins": 11102,
+      "log_bins": 2650
     },
     "r0735": {
-      "bins": 23700,
-      "src": "linear"
+      "linear_bins": 23700,
+      "log_bins": 2206
     },
     "r0736": {
-      "bins": 25333,
-      "src": "linear"
+      "linear_bins": 25333,
+      "log_bins": 2628
     },
     "r0737": {
-      "bins": 7451,
-      "src": "linear"
+      "linear_bins": 7451,
+      "log_bins": 2575
     },
     "r0738": {
-      "bins": 46716,
-      "src": "linear"
+      "linear_bins": 46716,
+      "log_bins": 1655
     },
     "r0739": {
-      "bins": 170281,
-      "src": "linear"
+      "linear_bins": 170281,
+      "log_bins": 1526
     },
     "r0740": {
-      "bins": 29334,
-      "src": "linear"
+      "linear_bins": 29334,
+      "log_bins": 2426
     },
     "r0741": {
-      "bins": 5664,
-      "src": "linear"
+      "linear_bins": 5664,
+      "log_bins": 2555
     },
     "r0742": {
-      "bins": 28894,
-      "src": "linear"
+      "linear_bins": 28894,
+      "log_bins": 2869
     },
     "r0743": {
-      "bins": 14428,
-      "src": "linear"
+      "linear_bins": 14428,
+      "log_bins": 2449
     },
     "r0744": {
-      "bins": 24160,
-      "src": "linear"
+      "linear_bins": 24160,
+      "log_bins": 2675
     },
     "r0745": {
-      "bins": 3827,
-      "src": "linear"
+      "linear_bins": 3827,
+      "log_bins": 2628
     },
     "r0746": {
-      "bins": 21449,
-      "src": "linear"
+      "linear_bins": 21449,
+      "log_bins": 2321
     },
     "r0747": {
-      "bins": 16873,
-      "src": "linear"
+      "linear_bins": 16873,
+      "log_bins": 2639
     },
     "r0748": {
-      "bins": 40331,
-      "src": "linear"
+      "linear_bins": 40331,
+      "log_bins": 2395
     },
     "r0749": {
-      "bins": 8761,
-      "src": "linear"
+      "linear_bins": 8761,
+      "log_bins": 2357
     },
     "r0750": {
-      "bins": 100266,
-      "src": "linear"
+      "linear_bins": 100266,
+      "log_bins": 1729
     },
     "r0751": {
-      "bins": 16103,
-      "src": "linear"
+      "linear_bins": 16103,
+      "log_bins": 2173
     },
     "r0752": {
-      "bins": 28637,
-      "src": "linear"
+      "linear_bins": 28637,
+      "log_bins": 1738
     },
     "r0753": {
-      "bins": 8026,
-      "src": "linear"
+      "linear_bins": 8026,
+      "log_bins": 2560
     },
     "r0754": {
-      "bins": 23610,
-      "src": "linear"
+      "linear_bins": 23610,
+      "log_bins": 2437
     },
     "r0755": {
-      "bins": 29362,
-      "src": "linear"
+      "linear_bins": 29362,
+      "log_bins": 2497
     },
     "r0756": {
-      "bins": 22873,
-      "src": "linear"
+      "linear_bins": 22873,
+      "log_bins": 1294
     },
     "r0757": {
-      "bins": 11474,
-      "src": "linear"
+      "linear_bins": 11474,
+      "log_bins": 2567
     },
     "r0758": {
-      "bins": 11381,
-      "src": "linear"
+      "linear_bins": 11381,
+      "log_bins": 2479
     },
     "r0759": {
-      "bins": 6497,
-      "src": "linear"
+      "linear_bins": 6497,
+      "log_bins": 2514
     },
     "r0760": {
-      "bins": 22129,
-      "src": "linear"
+      "linear_bins": 22129,
+      "log_bins": 2381
     },
     "r0761": {
-      "bins": 12381,
-      "src": "linear"
+      "linear_bins": 12381,
+      "log_bins": 2487
     },
     "r0762": {
-      "bins": 11317,
-      "src": "linear"
+      "linear_bins": 11317,
+      "log_bins": 2580
     },
     "r0763": {
-      "bins": 11526,
-      "src": "linear"
+      "linear_bins": 11526,
+      "log_bins": 2555
     },
     "r0764": {
-      "bins": 8080,
-      "src": "linear"
+      "linear_bins": 8080,
+      "log_bins": 2474
     },
     "r0765": {
-      "bins": 35520,
-      "src": "linear"
+      "linear_bins": 35520,
+      "log_bins": 2559
     },
     "r0766": {
-      "bins": 10971,
-      "src": "linear"
+      "linear_bins": 10971,
+      "log_bins": 2646
     },
     "r0767": {
-      "bins": 8320,
-      "src": "linear"
+      "linear_bins": 8320,
+      "log_bins": 2290
     },
     "r0768": {
-      "bins": 17531,
-      "src": "linear"
+      "linear_bins": 17531,
+      "log_bins": 2305
     },
     "r0769": {
-      "bins": 15743,
-      "src": "linear"
+      "linear_bins": 15743,
+      "log_bins": 2545
     },
     "r0770": {
-      "bins": 9108,
-      "src": "linear"
+      "linear_bins": 9108,
+      "log_bins": 2469
     },
     "r0771": {
-      "bins": 26963,
-      "src": "linear"
+      "linear_bins": 26963,
+      "log_bins": 2139
     },
     "r0772": {
-      "bins": 6991,
-      "src": "linear"
+      "linear_bins": 6991,
+      "log_bins": 2334
     },
     "r0773": {
-      "bins": 8422,
-      "src": "linear"
+      "linear_bins": 8422,
+      "log_bins": 2403
     },
     "r0774": {
-      "bins": 12723,
-      "src": "linear"
+      "linear_bins": 12723,
+      "log_bins": 2679
     },
     "r0775": {
-      "bins": 41210,
-      "src": "linear"
+      "linear_bins": 41210,
+      "log_bins": 2612
     },
     "r0776": {
-      "bins": 40522,
-      "src": "linear"
+      "linear_bins": 40522,
+      "log_bins": 2477
     },
     "r0777": {
-      "bins": 14872,
-      "src": "linear"
+      "linear_bins": 14872,
+      "log_bins": 2556
     },
     "r0778": {
-      "bins": 13572,
-      "src": "linear"
+      "linear_bins": 13572,
+      "log_bins": 2722
     },
     "r0779": {
-      "bins": 6644,
-      "src": "linear"
+      "linear_bins": 6644,
+      "log_bins": 2513
     },
     "r0780": {
-      "bins": 19280,
-      "src": "linear"
+      "linear_bins": 19280,
+      "log_bins": 2704
     },
     "r0781": {
-      "bins": 27748,
-      "src": "linear"
+      "linear_bins": 27748,
+      "log_bins": 2621
     },
     "r0782": {
-      "bins": 24703,
-      "src": "linear"
+      "linear_bins": 24703,
+      "log_bins": 2772
     },
     "r0783": {
-      "bins": 12034,
-      "src": "linear"
+      "linear_bins": 12034,
+      "log_bins": 2675
     },
     "r0784": {
-      "bins": 10164,
-      "src": "linear"
+      "linear_bins": 10164,
+      "log_bins": 2297
     },
     "r0785": {
-      "bins": 7749,
-      "src": "linear"
+      "linear_bins": 7749,
+      "log_bins": 2511
     },
     "r0786": {
-      "bins": 151685,
-      "src": "linear"
+      "linear_bins": 151685,
+      "log_bins": 2424
     },
     "r0787": {
-      "bins": 8940,
-      "src": "linear"
+      "linear_bins": 8940,
+      "log_bins": 2229
     },
     "r0788": {
-      "bins": 9631,
-      "src": "linear"
+      "linear_bins": 9631,
+      "log_bins": 2620
     },
     "r0789": {
-      "bins": 6999,
-      "src": "linear"
+      "linear_bins": 6999,
+      "log_bins": 2609
     },
     "r0790": {
-      "bins": 6684,
-      "src": "linear"
+      "linear_bins": 6684,
+      "log_bins": 2525
     },
     "r0791": {
-      "bins": 73816,
-      "src": "linear"
+      "linear_bins": 73816,
+      "log_bins": 2475
     },
     "r0792": {
-      "bins": 27372,
-      "src": "linear"
+      "linear_bins": 27372,
+      "log_bins": 2710
     },
     "r0793": {
-      "bins": 14482,
-      "src": "linear"
+      "linear_bins": 14482,
+      "log_bins": 2551
     },
     "r0794": {
-      "bins": 7989,
-      "src": "linear"
+      "linear_bins": 7989,
+      "log_bins": 2399
     },
     "r0795": {
-      "bins": 25012,
-      "src": "linear"
+      "linear_bins": 25012,
+      "log_bins": 2482
     },
     "r0797": {
-      "bins": 43069,
-      "src": "linear"
+      "linear_bins": 43069,
+      "log_bins": 1806
     },
     "r0798": {
-      "bins": 22740,
-      "src": "linear"
+      "linear_bins": 22740,
+      "log_bins": 2542
     },
     "r0799": {
-      "bins": 39075,
-      "src": "linear"
+      "linear_bins": 39075,
+      "log_bins": 2414
     },
     "r0800": {
-      "bins": 24579,
-      "src": "linear"
+      "linear_bins": 24579,
+      "log_bins": 1517
     },
     "r0801": {
-      "bins": 22879,
-      "src": "linear"
+      "linear_bins": 22879,
+      "log_bins": 2540
     },
     "r0803": {
-      "bins": 10150,
-      "src": "linear"
+      "linear_bins": 10150,
+      "log_bins": 2570
     },
     "r0804": {
-      "bins": 11182,
-      "src": "linear"
+      "linear_bins": 11182,
+      "log_bins": 2573
     },
     "r0805": {
-      "bins": 24224,
-      "src": "linear"
+      "linear_bins": 24224,
+      "log_bins": 2533
     },
     "r0806": {
-      "bins": 11907,
-      "src": "linear"
+      "linear_bins": 11907,
+      "log_bins": 2495
     },
     "r0807": {
-      "bins": 81061,
-      "src": "linear"
+      "linear_bins": 81061,
+      "log_bins": 2170
     },
     "r0808": {
-      "bins": 20161,
-      "src": "linear"
+      "linear_bins": 20161,
+      "log_bins": 1538
     },
     "r0809": {
-      "bins": 17126,
-      "src": "linear"
+      "linear_bins": 17126,
+      "log_bins": 2528
     },
     "r0810": {
-      "bins": 7797,
-      "src": "linear"
+      "linear_bins": 7797,
+      "log_bins": 2415
     },
     "r0811": {
-      "bins": 7655,
-      "src": "linear"
+      "linear_bins": 7655,
+      "log_bins": 2587
     },
     "r0812": {
-      "bins": 45182,
-      "src": "linear"
+      "linear_bins": 45182,
+      "log_bins": 2494
     },
     "r0813": {
-      "bins": 11248,
-      "src": "linear"
+      "linear_bins": 11248,
+      "log_bins": 2575
     },
     "r0814": {
-      "bins": 25991,
-      "src": "linear"
+      "linear_bins": 25991,
+      "log_bins": 2508
     },
     "r0815": {
-      "bins": 6947,
-      "src": "linear"
+      "linear_bins": 6947,
+      "log_bins": 2230
     },
     "r0816": {
-      "bins": 5724,
-      "src": "linear"
+      "linear_bins": 5724,
+      "log_bins": 2555
     },
     "r0817": {
-      "bins": 10405,
-      "src": "linear"
+      "linear_bins": 10405,
+      "log_bins": 2506
     },
     "r0818": {
-      "bins": 15690,
-      "src": "linear"
+      "linear_bins": 15690,
+      "log_bins": 1933
     },
     "r0819": {
-      "bins": 12576,
-      "src": "linear"
+      "linear_bins": 12576,
+      "log_bins": 2615
     },
     "r0820": {
-      "bins": 59290,
-      "src": "linear"
+      "linear_bins": 59290,
+      "log_bins": 2747
     },
     "r0821": {
-      "bins": 8131,
-      "src": "linear"
+      "linear_bins": 8131,
+      "log_bins": 2308
     },
     "r0822": {
-      "bins": 8011,
-      "src": "linear"
+      "linear_bins": 8011,
+      "log_bins": 2363
     },
     "r0823": {
-      "bins": 187235,
-      "src": "linear"
+      "linear_bins": 187235,
+      "log_bins": 1680
     },
     "r0824": {
-      "bins": 11754,
-      "src": "linear"
+      "linear_bins": 11754,
+      "log_bins": 2564
     },
     "r0825": {
-      "bins": 20747,
-      "src": "linear"
+      "linear_bins": 20747,
+      "log_bins": 2609
     },
     "r0826": {
-      "bins": 5824,
-      "src": "linear"
+      "linear_bins": 5824,
+      "log_bins": 2554
     },
     "r0827": {
-      "bins": 17935,
-      "src": "linear"
+      "linear_bins": 17935,
+      "log_bins": 2670
     },
     "r0828": {
-      "bins": 17043,
-      "src": "linear"
+      "linear_bins": 17043,
+      "log_bins": 2637
     },
     "r0829": {
-      "bins": 17086,
-      "src": "linear"
+      "linear_bins": 17086,
+      "log_bins": 2366
     },
     "r0830": {
-      "bins": 10131,
-      "src": "linear"
+      "linear_bins": 10131,
+      "log_bins": 2549
     },
     "r0831": {
-      "bins": 6196,
-      "src": "linear"
+      "linear_bins": 6196,
+      "log_bins": 2573
     },
     "r0832": {
-      "bins": 6735,
-      "src": "linear"
+      "linear_bins": 6735,
+      "log_bins": 2599
     },
     "r0833": {
-      "bins": 41596,
-      "src": "linear"
+      "linear_bins": 41596,
+      "log_bins": 2782
     },
     "r0834": {
-      "bins": 14816,
-      "src": "linear"
+      "linear_bins": 14816,
+      "log_bins": 2492
     },
     "r0835": {
-      "bins": 15735,
-      "src": "linear"
+      "linear_bins": 15735,
+      "log_bins": 2556
     },
     "r0836": {
-      "bins": 27530,
-      "src": "linear"
+      "linear_bins": 27530,
+      "log_bins": 2661
     },
     "r0837": {
-      "bins": 27139,
-      "src": "linear"
+      "linear_bins": 27139,
+      "log_bins": 2474
     },
     "r0838": {
-      "bins": 9804,
-      "src": "linear"
+      "linear_bins": 9804,
+      "log_bins": 2609
     },
     "r0839": {
-      "bins": 28827,
-      "src": "linear"
+      "linear_bins": 28827,
+      "log_bins": 1674
     },
     "r0840": {
-      "bins": 15603,
-      "src": "linear"
+      "linear_bins": 15603,
+      "log_bins": 2384
     },
     "r0841": {
-      "bins": 15426,
-      "src": "linear"
+      "linear_bins": 15426,
+      "log_bins": 1178
     },
     "r0842": {
-      "bins": 36768,
-      "src": "linear"
+      "linear_bins": 36768,
+      "log_bins": 2757
     },
     "r0843": {
-      "bins": 179804,
-      "src": "linear"
+      "linear_bins": 179804,
+      "log_bins": 2020
     },
     "r0844": {
-      "bins": 11230,
-      "src": "linear"
+      "linear_bins": 11230,
+      "log_bins": 2225
     },
     "r0845": {
-      "bins": 13002,
-      "src": "linear"
+      "linear_bins": 13002,
+      "log_bins": 2461
     },
     "r0846": {
-      "bins": 31958,
-      "src": "linear"
+      "linear_bins": 31958,
+      "log_bins": 2514
     },
     "r0847": {
-      "bins": 34518,
-      "src": "linear"
+      "linear_bins": 34518,
+      "log_bins": 1660
     },
     "r0848": {
-      "bins": 8632,
-      "src": "linear"
+      "linear_bins": 8632,
+      "log_bins": 2118
     },
     "r0849": {
-      "bins": 29554,
-      "src": "linear"
+      "linear_bins": 29554,
+      "log_bins": 1497
     },
     "r0850": {
-      "bins": 8767,
-      "src": "linear"
+      "linear_bins": 8767,
+      "log_bins": 2561
     },
     "r0851": {
-      "bins": 12870,
-      "src": "linear"
+      "linear_bins": 12870,
+      "log_bins": 2245
     },
     "r0852": {
-      "bins": 15493,
-      "src": "linear"
+      "linear_bins": 15493,
+      "log_bins": 2477
     },
     "r0853": {
-      "bins": 25975,
-      "src": "linear"
+      "linear_bins": 25975,
+      "log_bins": 2338
     },
     "r0854": {
-      "bins": 17715,
-      "src": "linear"
+      "linear_bins": 17715,
+      "log_bins": 2649
     },
     "r0855": {
-      "bins": 24563,
-      "src": "linear"
+      "linear_bins": 24563,
+      "log_bins": 2442
     },
     "r0857": {
-      "bins": 7886,
-      "src": "linear"
+      "linear_bins": 7886,
+      "log_bins": 2296
     },
     "r0858": {
-      "bins": 8156,
-      "src": "linear"
+      "linear_bins": 8156,
+      "log_bins": 2362
     },
     "r0859": {
-      "bins": 24661,
-      "src": "linear"
+      "linear_bins": 24661,
+      "log_bins": 2731
     },
     "r0860": {
-      "bins": 5567,
-      "src": "linear"
+      "linear_bins": 5567,
+      "log_bins": 2268
     },
     "r0861": {
-      "bins": 12481,
-      "src": "linear"
+      "linear_bins": 12481,
+      "log_bins": 2254
     },
     "r0862": {
-      "bins": 13121,
-      "src": "linear"
+      "linear_bins": 13121,
+      "log_bins": 2512
     },
     "r0863": {
-      "bins": 8131,
-      "src": "linear"
+      "linear_bins": 8131,
+      "log_bins": 2595
     },
     "r0864": {
-      "bins": 11950,
-      "src": "linear"
+      "linear_bins": 11950,
+      "log_bins": 2481
     },
     "r0865": {
-      "bins": 13840,
-      "src": "linear"
+      "linear_bins": 13840,
+      "log_bins": 2666
     },
     "r0866": {
-      "bins": 22707,
-      "src": "linear"
+      "linear_bins": 22707,
+      "log_bins": 2693
     },
     "r0867": {
-      "bins": 5284,
-      "src": "linear"
+      "linear_bins": 5284,
+      "log_bins": 2611
     },
     "r0868": {
-      "bins": 15837,
-      "src": "linear"
+      "linear_bins": 15837,
+      "log_bins": 2557
     },
     "r0869": {
-      "bins": 17062,
-      "src": "linear"
+      "linear_bins": 17062,
+      "log_bins": 2602
     },
     "r0870": {
-      "bins": 5656,
-      "src": "linear"
+      "linear_bins": 5656,
+      "log_bins": 2305
     },
     "r0871": {
-      "bins": 27340,
-      "src": "linear"
+      "linear_bins": 27340,
+      "log_bins": 2694
     },
     "r0872": {
-      "bins": 6233,
-      "src": "linear"
+      "linear_bins": 6233,
+      "log_bins": 2689
     },
     "r0873": {
-      "bins": 88882,
-      "src": "linear"
+      "linear_bins": 88882,
+      "log_bins": 2423
     },
     "r0874": {
-      "bins": 14752,
-      "src": "linear"
+      "linear_bins": 14752,
+      "log_bins": 2543
     },
     "r0875": {
-      "bins": 140891,
-      "src": "linear"
+      "linear_bins": 140891,
+      "log_bins": 1722
     },
     "r0876": {
-      "bins": 21917,
-      "src": "linear"
+      "linear_bins": 21917,
+      "log_bins": 2418
     },
     "r0877": {
-      "bins": 9053,
-      "src": "linear"
+      "linear_bins": 9053,
+      "log_bins": 2488
     },
     "r0878": {
-      "bins": 12206,
-      "src": "linear"
+      "linear_bins": 12206,
+      "log_bins": 2635
     },
     "r0879": {
-      "bins": 91545,
-      "src": "linear"
+      "linear_bins": 91545,
+      "log_bins": 2657
     },
     "r0880": {
-      "bins": 17166,
-      "src": "linear"
+      "linear_bins": 17166,
+      "log_bins": 1499
     },
     "r0882": {
-      "bins": 79718,
-      "src": "linear"
+      "linear_bins": 79718,
+      "log_bins": 2159
     },
     "r0883": {
-      "bins": 37205,
-      "src": "linear"
+      "linear_bins": 37205,
+      "log_bins": 2505
     },
     "r0884": {
-      "bins": 37199,
-      "src": "linear"
+      "linear_bins": 37199,
+      "log_bins": 2385
     },
     "r0885": {
-      "bins": 19814,
-      "src": "linear"
+      "linear_bins": 19814,
+      "log_bins": 2446
     },
     "r0886": {
-      "bins": 13258,
-      "src": "linear"
+      "linear_bins": 13258,
+      "log_bins": 2643
     },
     "r0887": {
-      "bins": 20729,
-      "src": "linear"
+      "linear_bins": 20729,
+      "log_bins": 2057
     },
     "r0888": {
-      "bins": 24464,
-      "src": "linear"
+      "linear_bins": 24464,
+      "log_bins": 2499
     },
     "r0889": {
-      "bins": 58216,
-      "src": "linear"
+      "linear_bins": 58216,
+      "log_bins": 2357
     },
     "r0890": {
-      "bins": 31942,
-      "src": "linear"
+      "linear_bins": 31942,
+      "log_bins": 2161
     },
     "r0891": {
-      "bins": 8776,
-      "src": "linear"
+      "linear_bins": 8776,
+      "log_bins": 2571
     },
     "r0892": {
-      "bins": 12673,
-      "src": "linear"
+      "linear_bins": 12673,
+      "log_bins": 2537
     },
     "r0893": {
-      "bins": 19871,
-      "src": "linear"
+      "linear_bins": 19871,
+      "log_bins": 2447
     },
     "r0894": {
-      "bins": 13867,
-      "src": "linear"
+      "linear_bins": 13867,
+      "log_bins": 2284
     },
     "r0895": {
-      "bins": 10261,
-      "src": "linear"
+      "linear_bins": 10261,
+      "log_bins": 2573
     },
     "r0896": {
-      "bins": 5422,
-      "src": "linear"
+      "linear_bins": 5422,
+      "log_bins": 2405
     },
     "r0897": {
-      "bins": 5621,
-      "src": "linear"
+      "linear_bins": 5621,
+      "log_bins": 2666
     },
     "r0898": {
-      "bins": 8220,
-      "src": "linear"
+      "linear_bins": 8220,
+      "log_bins": 2300
     },
     "r0899": {
-      "bins": 20302,
-      "src": "linear"
+      "linear_bins": 20302,
+      "log_bins": 2272
     },
     "r0900": {
-      "bins": 13813,
-      "src": "linear"
+      "linear_bins": 13813,
+      "log_bins": 2484
     },
     "r0901": {
-      "bins": 18382,
-      "src": "linear"
+      "linear_bins": 18382,
+      "log_bins": 2462
     },
     "r0902": {
-      "bins": 9165,
-      "src": "linear"
+      "linear_bins": 9165,
+      "log_bins": 2478
     },
     "r0903": {
-      "bins": 8247,
-      "src": "linear"
+      "linear_bins": 8247,
+      "log_bins": 2249
     },
     "r0904": {
-      "bins": 12992,
-      "src": "linear"
+      "linear_bins": 12992,
+      "log_bins": 2560
     },
     "r0905": {
-      "bins": 9205,
-      "src": "linear"
+      "linear_bins": 9205,
+      "log_bins": 2558
     },
     "r0906": {
-      "bins": 24959,
-      "src": "linear"
+      "linear_bins": 24959,
+      "log_bins": 2555
     },
     "r0907": {
-      "bins": 19395,
-      "src": "linear"
+      "linear_bins": 19395,
+      "log_bins": 2526
     },
     "r0908": {
-      "bins": 19923,
-      "src": "linear"
+      "linear_bins": 19923,
+      "log_bins": 2588
     },
     "r0910": {
-      "bins": 8283,
-      "src": "linear"
+      "linear_bins": 8283,
+      "log_bins": 2492
     },
     "r0911": {
-      "bins": 22535,
-      "src": "linear"
+      "linear_bins": 22535,
+      "log_bins": 2605
     },
     "r0912": {
-      "bins": 14874,
-      "src": "linear"
+      "linear_bins": 14874,
+      "log_bins": 2551
     },
     "r0913": {
-      "bins": 12535,
-      "src": "linear"
+      "linear_bins": 12535,
+      "log_bins": 2617
     },
     "r0914": {
-      "bins": 61282,
-      "src": "linear"
+      "linear_bins": 61282,
+      "log_bins": 2024
     },
     "r0915": {
-      "bins": 6572,
-      "src": "linear"
+      "linear_bins": 6572,
+      "log_bins": 2435
     },
     "r0916": {
-      "bins": 21120,
-      "src": "linear"
+      "linear_bins": 21120,
+      "log_bins": 2371
     },
     "r0917": {
-      "bins": 73602,
-      "src": "linear"
+      "linear_bins": 73602,
+      "log_bins": 2761
     },
     "r0918": {
-      "bins": 18818,
-      "src": "linear"
+      "linear_bins": 18818,
+      "log_bins": 2376
     },
     "r0919": {
-      "bins": 77866,
-      "src": "linear"
+      "linear_bins": 77866,
+      "log_bins": 2397
     },
     "r0920": {
-      "bins": 8345,
-      "src": "linear"
+      "linear_bins": 8345,
+      "log_bins": 2508
     },
     "r0921": {
-      "bins": 38544,
-      "src": "linear"
+      "linear_bins": 38544,
+      "log_bins": 2383
     },
     "r0922": {
-      "bins": 11136,
-      "src": "linear"
+      "linear_bins": 11136,
+      "log_bins": 2597
     },
     "r0923": {
-      "bins": 9507,
-      "src": "linear"
+      "linear_bins": 9507,
+      "log_bins": 2557
     },
     "r0924": {
-      "bins": 127206,
-      "src": "linear"
+      "linear_bins": 127206,
+      "log_bins": 2783
     },
     "r0925": {
-      "bins": 12365,
-      "src": "linear"
+      "linear_bins": 12365,
+      "log_bins": 2599
     },
     "r0926": {
-      "bins": 18375,
-      "src": "linear"
+      "linear_bins": 18375,
+      "log_bins": 2432
     },
     "r0927": {
-      "bins": 49838,
-      "src": "linear"
+      "linear_bins": 49838,
+      "log_bins": 2431
     },
     "r0928": {
-      "bins": 17780,
-      "src": "linear"
+      "linear_bins": 17780,
+      "log_bins": 2602
     },
     "r0929": {
-      "bins": 9368,
-      "src": "linear"
+      "linear_bins": 9368,
+      "log_bins": 2599
     },
     "r0930": {
-      "bins": 151667,
-      "src": "linear"
+      "linear_bins": 151667,
+      "log_bins": 1603
     },
     "r0931": {
-      "bins": 67233,
-      "src": "linear"
+      "linear_bins": 67233,
+      "log_bins": 2531
     },
     "r0932": {
-      "bins": 9812,
-      "src": "linear"
+      "linear_bins": 9812,
+      "log_bins": 2507
     },
     "r0933": {
-      "bins": 8081,
-      "src": "linear"
+      "linear_bins": 8081,
+      "log_bins": 2451
     },
     "r0934": {
-      "bins": 45000,
-      "src": "linear"
+      "linear_bins": 45000,
+      "log_bins": 2430
     },
     "r0935": {
-      "bins": 23487,
-      "src": "linear"
+      "linear_bins": 23487,
+      "log_bins": 2086
     },
     "r0936": {
-      "bins": 18690,
-      "src": "linear"
+      "linear_bins": 18690,
+      "log_bins": 2595
     },
     "r0937": {
-      "bins": 27727,
-      "src": "linear"
+      "linear_bins": 27727,
+      "log_bins": 1655
     },
     "r0938": {
-      "bins": 11821,
-      "src": "linear"
+      "linear_bins": 11821,
+      "log_bins": 2444
     },
     "r0939": {
-      "bins": 8212,
-      "src": "linear"
+      "linear_bins": 8212,
+      "log_bins": 2570
     },
     "r0940": {
-      "bins": 25314,
-      "src": "linear"
+      "linear_bins": 25314,
+      "log_bins": 2567
     },
     "r0941": {
-      "bins": 28182,
-      "src": "linear"
+      "linear_bins": 28182,
+      "log_bins": 1859
     },
     "r0942": {
-      "bins": 8050,
-      "src": "linear"
+      "linear_bins": 8050,
+      "log_bins": 2607
     },
     "r0943": {
-      "bins": 22315,
-      "src": "linear"
+      "linear_bins": 22315,
+      "log_bins": 2624
     },
     "r0944": {
-      "bins": 17780,
-      "src": "linear"
+      "linear_bins": 17780,
+      "log_bins": 2653
     },
     "r0945": {
-      "bins": 20003,
-      "src": "linear"
+      "linear_bins": 20003,
+      "log_bins": 2413
     },
     "r0946": {
-      "bins": 7459,
-      "src": "linear"
+      "linear_bins": 7459,
+      "log_bins": 2548
     },
     "r0947": {
-      "bins": 11949,
-      "src": "linear"
+      "linear_bins": 11949,
+      "log_bins": 2579
     },
     "r0948": {
-      "bins": 14943,
-      "src": "linear"
+      "linear_bins": 14943,
+      "log_bins": 2523
     },
     "r0949": {
-      "bins": 7138,
-      "src": "linear"
+      "linear_bins": 7138,
+      "log_bins": 2641
     },
     "r0950": {
-      "bins": 14005,
-      "src": "linear"
+      "linear_bins": 14005,
+      "log_bins": 2547
     },
     "r0951": {
-      "bins": 18755,
-      "src": "linear"
+      "linear_bins": 18755,
+      "log_bins": 2430
     },
     "r0952": {
-      "bins": 6961,
-      "src": "linear"
+      "linear_bins": 6961,
+      "log_bins": 2559
     },
     "r0953": {
-      "bins": 17758,
-      "src": "linear"
+      "linear_bins": 17758,
+      "log_bins": 2429
     },
     "r0954": {
-      "bins": 14127,
-      "src": "linear"
+      "linear_bins": 14127,
+      "log_bins": 2455
     },
     "r0955": {
-      "bins": 12332,
-      "src": "linear"
+      "linear_bins": 12332,
+      "log_bins": 2417
     },
     "r0956": {
-      "bins": 29658,
-      "src": "linear"
+      "linear_bins": 29658,
+      "log_bins": 2392
     },
     "r0957": {
-      "bins": 18433,
-      "src": "linear"
+      "linear_bins": 18433,
+      "log_bins": 2612
     },
     "r0958": {
-      "bins": 16816,
-      "src": "linear"
+      "linear_bins": 16816,
+      "log_bins": 2627
     },
     "r0959": {
-      "bins": 5569,
-      "src": "linear"
+      "linear_bins": 5569,
+      "log_bins": 2218
     },
     "r0960": {
-      "bins": 8590,
-      "src": "linear"
+      "linear_bins": 8590,
+      "log_bins": 2498
     },
     "r0961": {
-      "bins": 10459,
-      "src": "linear"
+      "linear_bins": 10459,
+      "log_bins": 2503
     },
     "r0962": {
-      "bins": 11856,
-      "src": "linear"
+      "linear_bins": 11856,
+      "log_bins": 2552
     },
     "r0963": {
-      "bins": 44564,
-      "src": "linear"
+      "linear_bins": 44564,
+      "log_bins": 2576
     },
     "r0964": {
-      "bins": 19852,
-      "src": "linear"
+      "linear_bins": 19852,
+      "log_bins": 2668
     },
     "r0966": {
-      "bins": 9209,
-      "src": "linear"
+      "linear_bins": 9209,
+      "log_bins": 2469
     },
     "r0967": {
-      "bins": 22744,
-      "src": "linear"
+      "linear_bins": 22744,
+      "log_bins": 2660
     },
     "r0968": {
-      "bins": 7243,
-      "src": "linear"
+      "linear_bins": 7243,
+      "log_bins": 2492
     },
     "r0969": {
-      "bins": 24307,
-      "src": "linear"
+      "linear_bins": 24307,
+      "log_bins": 1621
     },
     "r0970": {
-      "bins": 6873,
-      "src": "linear"
+      "linear_bins": 6873,
+      "log_bins": 2379
     }
   }
 }

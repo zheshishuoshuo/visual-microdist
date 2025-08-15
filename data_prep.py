@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+
+# usage
+# python data_prep.py --csv samples_mixed.csv --src output_maps_csv --out data_cache --limit 970
+
 import os, json, argparse
 import numpy as np
 import pandas as pd
@@ -26,14 +30,15 @@ def load_hist_txt(prefix: str):
         arr = np.genfromtxt(log_path, usecols=(0, 1))
         if arr.size:
             arr = np.atleast_2d(arr)
-            b   = arr[:, 0].astype(np.float64)
+            b   = arr[:, 0].astype(np.float64)  # 文本文件的 bin 起点 (log μ * 100)
             cnt = arr[:, 1].astype(np.int64)
-            L   = b / 100.0
+            L   = b / 100.0                     # bin 起点 log μ
             dL  = 0.01
-            mu_mid = np.exp(L + 0.5*dL)
-            order = np.argsort(mu_mid)
-            mu_log = mu_mid[order]
+            logmu_mid = L + 0.5 * dL             # bin 中点 log μ
+            order = np.argsort(logmu_mid)
+            mu_log = logmu_mid[order]            # 这里保存的是 log μ
             cnt_log = cnt[order]
+
 
     if mu_lin is None and mu_log is None:
         return None
@@ -96,9 +101,13 @@ def main():
         if mu_lin is not None:
             data["mu_linear"] = mu_lin.astype(np.float32)
             data["cnt_linear"] = cnt_lin.astype(np.int32)
+        # if mu_log is not None:
+        #     data["mu_log"] = mu_log.astype(np.float32)
+        #     data["cnt_log"] = cnt_log.astype(np.int32)
         if mu_log is not None:
-            data["mu_log"] = mu_log.astype(np.float32)
-            data["cnt_log"] = cnt_log.astype(np.int32)
+            data["logmu_mid"] = mu_log.astype(np.float32)   # log μ bin 中点
+            data["cnt_log"] = cnt_log.astype(np.int32)      # 对应 bin 的计数
+
         if not data:
             continue
         np.savez_compressed(npz_path, **data)
@@ -108,6 +117,7 @@ def main():
             manifest[rid]["linear_bins"] = int(len(mu_lin))
         if mu_log is not None:
             manifest[rid]["log_bins"] = int(len(mu_log))
+        
 
     # 写清单
     with open(os.path.join(args.out, "manifest.json"), "w") as f:
