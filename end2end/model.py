@@ -167,8 +167,15 @@ class ConditionalMixtureModel:
         pdf = (alpha - 1.0) / mu0 * (mu0 / mu) ** alpha
         return anp.where(mu >= mu0, pdf, 0.0)
 
-    def _mixture_pdf(self, y: anp.ndarray, params: MixtureParams) -> anp.ndarray:
-        """Mixture density on a ``log μ`` grid with soft support gating."""
+    def _mixture_pdf(
+        self, y: anp.ndarray, params: MixtureParams, *, train: bool = True
+    ) -> anp.ndarray:
+        """Mixture density on a ``log μ`` grid.
+
+        During training a soft support gate is applied to encourage the
+        network to learn an appropriate window.  At inference time the gate is
+        disabled so that a subsequent hard mask can be applied cleanly.
+        """
 
         mu = anp.exp(y)
         comps: List[anp.ndarray] = []
@@ -179,12 +186,12 @@ class ConditionalMixtureModel:
         for w, p in zip(params.weights, comps):
             pdf = pdf + w * p
 
-        # Soft support window during training
-        beta = 100.0  # sharpness of the sigmoid gates
-        gate_lo = 1.0 / (1.0 + anp.exp(-beta * (y - params.y_lo)))
-        gate_hi = 1.0 / (1.0 + anp.exp(-beta * (params.y_hi - y)))
-        gate = gate_lo * gate_hi
-        pdf = pdf * gate
+        if train:
+            beta = 100.0  # sharpness of the sigmoid gates
+            gate_lo = 1.0 / (1.0 + anp.exp(-beta * (y - params.y_lo)))
+            gate_hi = 1.0 / (1.0 + anp.exp(-beta * (params.y_hi - y)))
+            gate = gate_lo * gate_hi
+            pdf = pdf * gate
 
         # normalise numerically to protect against accumulation errors.
         diffs = mu[1:] - mu[:-1]
@@ -207,7 +214,7 @@ class ConditionalMixtureModel:
             dmu = item["dmu"]
 
             params = self._decode(eta)
-            pdf = self._mixture_pdf(y, params)
+            pdf = self._mixture_pdf(y, params, train=True)
             lam = N * pdf * dmu
             lam = anp.clip(lam, 1e-30, anp.inf)
             nll = anp.sum(lam - cnt * anp.log(lam)) / (N + self.eps)
@@ -265,7 +272,7 @@ class ConditionalMixtureModel:
             N = item["N"]
             dmu = item["dmu"]
             params = self._decode(eta)
-            pdf = self._mixture_pdf(y, params)
+            pdf = self._mixture_pdf(y, params, train=True)
             lam = N * pdf * dmu
             lam = anp.clip(lam, 1e-30, anp.inf)
             nll = float(anp.sum(lam - cnt * anp.log(lam)) / (N + self.eps))
@@ -283,7 +290,7 @@ class ConditionalMixtureModel:
 
         y = anp.log(mu)
         params = self._decode(eta)
-        pdf = self._mixture_pdf(y, params)
+        pdf = self._mixture_pdf(y, params, train=False)
         mask = (y >= params.y_lo) * (y <= params.y_hi)
         pdf = pdf * mask
         if anp.sum(pdf) == 0:
@@ -413,10 +420,22 @@ def load_dataset(cache_dir: str, limit: int | None = None) -> List[Dict[str, anp
         y = arr["logmu_mid"].astype(float)
         cnt = arr["cnt_log"].astype(float)
         N = float(cnt.sum())
-        dL = 0.01
+        if y.size > 1:
+            dL = float(y[1] - y[0])
+        else:
+            dL = 0.01
         dmu = np.exp(y + 0.5 * dL) - np.exp(y - 0.5 * dL)
         eta = anp.array([row.kappa, row.gamma, row.s])
-        out.append({"eta": eta, "y": y, "cnt": cnt, "N": N, "dmu": dmu, "rid": rid})
+        out.append(
+            {
+                "eta": eta,
+                "y": y,
+                "cnt": cnt,
+                "N": N,
+                "dmu": dmu,
+                "rid": rid,
+            }
+        )
     return out
 
 
