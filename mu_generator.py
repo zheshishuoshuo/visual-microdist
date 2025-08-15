@@ -8,6 +8,7 @@ parameters, evaluate the analytic PDF/CDF and draw random samples.
 
 from __future__ import annotations
 
+import argparse
 import os
 from dataclasses import dataclass
 from typing import Iterable, List, Tuple
@@ -170,7 +171,8 @@ class PsiModel:
         pts = np.column_stack([
             np.atleast_1d(kappa), np.atleast_1d(gamma), np.atleast_1d(s)
         ])
-        return self.rbf(pts)
+        out = self.rbf(pts)
+        return out[0] if out.shape[0] == 1 else out
 
 
 def build_psi_model(df: pd.DataFrame, psi_list: List[np.ndarray]) -> PsiModel:
@@ -218,3 +220,58 @@ __all__ = [
     "sample_mu",
     "PsiModel",
 ]
+
+
+def main(argv: List[str] | None = None) -> None:
+    """Command line interface for sampling ``mu`` values.
+
+    This utility builds a small ``PsiModel`` from cached histograms and
+    draws random samples for user supplied ``(kappa, gamma, s)``.
+    ``--limit`` can be used to restrict the number of histograms fitted in
+    order to keep the example lightweight.
+    """
+
+    parser = argparse.ArgumentParser(description="Sample from p(mu | kappa, gamma, s)")
+    parser.add_argument("--kappa", type=float, required=True, help="kappa value")
+    parser.add_argument("--gamma", type=float, required=True, help="gamma value")
+    parser.add_argument("--s", type=float, required=True, help="s value")
+    parser.add_argument("--size", type=int, default=1, help="number of samples to draw")
+    parser.add_argument(
+        "--cache-dir",
+        default="data_cache",
+        help="directory containing histogram cache and samples.csv",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=100,
+        help="number of histograms to fit when building the model",
+    )
+    parser.add_argument("--seed", type=int, default=None, help="random seed")
+    args = parser.parse_args(argv)
+
+    grid, items = load_interpolated(args.cache_dir)
+    df = pd.read_csv(os.path.join(args.cache_dir, "samples.csv")).set_index("rid")
+
+    psi_list: List[np.ndarray] = []
+    params: List[np.ndarray] = []
+    for item in items[: args.limit]:
+        rid = item["rid"]
+        if rid not in df.index:
+            continue
+        psi_list.append(fit_single(grid, item["cnt"], item["N"]))
+        params.append(df.loc[rid, ["kappa", "gamma", "s"]].to_numpy())
+
+    if not psi_list:
+        raise RuntimeError("no histograms fitted; check cache directory")
+
+    model_df = pd.DataFrame(params, columns=["kappa", "gamma", "s"])
+    model = build_psi_model(model_df, psi_list)
+    rng = np.random.default_rng(args.seed)
+    samples = sample_mu(args.kappa, args.gamma, args.s, model, args.size, rng)
+    for mu in samples:
+        print(mu)
+
+
+if __name__ == "__main__":
+    main()
