@@ -13,5 +13,13 @@ The new module `mu_generator.py` implements:
 * evaluation and sampling utilities for the resulting analytic
   distribution.
 
-Run `python -m mu_generator` to import the functions or see the source
-for details.
+In addition to being importable as a module, `mu_generator.py` provides a
+small command line interface that can draw sample magnifications.  For
+example:
+
+```
+python mu_generator.py --kappa 0.5 --gamma 0.5 --s 0.5 --size 3
+```
+
+This builds a lightweight model from the cached histograms and prints
+three random `mu` samples.
