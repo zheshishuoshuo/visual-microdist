@@ -4,35 +4,40 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-def load_hist_txt_to_mu_cnt(prefix: str):
-    """优先线性直方图；失败则尝试 log 直方图（ln μ, ×100）→ 返回 (mu, cnt, src) 或 None"""
+def load_hist_txt(prefix: str):
+    """读取 prefix 对应的线性与 log 直方图，返回 (mu_linear, cnt_linear, mu_log, cnt_log)，若均缺失则返回 None"""
     mags_path = prefix + "ipm_mags_numpixels.txt"
     log_path  = prefix + "ipm_log_mags_numpixels.txt"
 
-    # 1) 线性
-    if os.path.exists(mags_path):
-        arr = np.genfromtxt(mags_path, usecols=(0,1))
-        if arr.size:
-            arr = np.atleast_2d(arr)
-            mu  = arr[:,0].astype(np.float64) / 1000.0
-            cnt = arr[:,1].astype(np.int64)
-            order = np.argsort(mu)
-            return mu[order], cnt[order], "linear"
+    mu_lin = cnt_lin = None
+    mu_log = cnt_log = None
 
-    # 2) log → μ 中点
-    if os.path.exists(log_path):
-        arr = np.genfromtxt(log_path, usecols=(0,1))
+    if os.path.exists(mags_path):
+        arr = np.genfromtxt(mags_path, usecols=(0, 1))
         if arr.size:
             arr = np.atleast_2d(arr)
-            b   = arr[:,0].astype(np.float64)
-            cnt = arr[:,1].astype(np.int64)
+            mu  = arr[:, 0].astype(np.float64) / 1000.0
+            cnt = arr[:, 1].astype(np.int64)
+            order = np.argsort(mu)
+            mu_lin = mu[order]
+            cnt_lin = cnt[order]
+
+    if os.path.exists(log_path):
+        arr = np.genfromtxt(log_path, usecols=(0, 1))
+        if arr.size:
+            arr = np.atleast_2d(arr)
+            b   = arr[:, 0].astype(np.float64)
+            cnt = arr[:, 1].astype(np.int64)
             L   = b / 100.0
             dL  = 0.01
             mu_mid = np.exp(L + 0.5*dL)
-            order  = np.argsort(mu_mid)
-            return mu_mid[order], cnt[order], "log"
+            order = np.argsort(mu_mid)
+            mu_log = mu_mid[order]
+            cnt_log = cnt[order]
 
-    return None
+    if mu_lin is None and mu_log is None:
+        return None
+    return mu_lin, cnt_lin, mu_log, cnt_log
 
 def main():
     ap = argparse.ArgumentParser()
@@ -81,17 +86,28 @@ def main():
     for _, row in tqdm(df.iterrows()):
         rid = row["rid"]
         prefix_txt = os.path.join(args.src, f"{rid}_")
-        got = load_hist_txt_to_mu_cnt(prefix_txt)
+        got = load_hist_txt(prefix_txt)
         if got is None:
             continue
-        mu, cnt, src = got
-        # 存为 NPZ（float32/int32 足够 & 更小）
+        mu_lin, cnt_lin, mu_log, cnt_log = got
+
         npz_path = os.path.join(hist_out, f"{rid}.npz")
-        np.savez_compressed(npz_path,
-                            mu=mu.astype(np.float32),
-                            cnt=cnt.astype(np.int32),
-                            src=np.array([0 if src=="linear" else 1], dtype=np.int8))
-        manifest[rid] = {"bins": int(len(mu)), "src": src}
+        data = {}
+        if mu_lin is not None:
+            data["mu_linear"] = mu_lin.astype(np.float32)
+            data["cnt_linear"] = cnt_lin.astype(np.int32)
+        if mu_log is not None:
+            data["mu_log"] = mu_log.astype(np.float32)
+            data["cnt_log"] = cnt_log.astype(np.int32)
+        if not data:
+            continue
+        np.savez_compressed(npz_path, **data)
+
+        manifest[rid] = {}
+        if mu_lin is not None:
+            manifest[rid]["linear_bins"] = int(len(mu_lin))
+        if mu_log is not None:
+            manifest[rid]["log_bins"] = int(len(mu_log))
 
     # 写清单
     with open(os.path.join(args.out, "manifest.json"), "w") as f:
