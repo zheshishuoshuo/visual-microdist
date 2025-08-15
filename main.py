@@ -163,16 +163,38 @@ app.layout = html.Div([
 from functools import lru_cache
 
 @lru_cache(maxsize=4096)
-def _load_hist_npz(rid: str):
-    """从缓存 NPZ 读取 (mu, cnt, src, path)；没有则返回 None"""
+def _load_hist_npz(rid: str, prefer: str = "linear"):
+    """从缓存 NPZ 读取 (mu, cnt, src, path)；支持新格式(同时包含 linear/log) 与旧格式"""
     npz_path = os.path.join(HIST_CACHE_DIR, f"{rid}.npz")
     if not os.path.exists(npz_path):
         return None
     z = np.load(npz_path)
-    mu  = z["mu"].astype(float)      # 已经是 μ（线性或 log->μ中点）
-    cnt = z["cnt"].astype(float)
-    src = "linear" if int(z["src"][0]) == 0 else "log"
-    return mu, cnt, src, npz_path
+
+    # 新格式
+    key_mu = f"mu_{prefer}"
+    key_cnt = f"cnt_{prefer}"
+    if key_mu in z and key_cnt in z:
+        mu = z[key_mu].astype(float)
+        cnt = z[key_cnt].astype(float)
+        return mu, cnt, prefer, npz_path
+
+    other = "log" if prefer == "linear" else "linear"
+    key_mu = f"mu_{other}"
+    key_cnt = f"cnt_{other}"
+    if key_mu in z and key_cnt in z:
+        mu = z[key_mu].astype(float)
+        cnt = z[key_cnt].astype(float)
+        return mu, cnt, other, npz_path
+
+    # 旧格式兼容
+    if "mu" in z and "cnt" in z:
+        mu = z["mu"].astype(float)
+        cnt = z["cnt"].astype(float)
+        src = "linear"
+        if "src" in z:
+            src = "linear" if int(z["src"][0]) == 0 else "log"
+        return mu, cnt, src, npz_path
+    return None
 
 @lru_cache(maxsize=4096)
 def _load_hist_txt_linear(rid: str):
@@ -201,11 +223,15 @@ def _load_hist_txt_log(rid: str):
     return mu[order], cnt[order], "log", path
 
 def load_hist_for_rid(rid: str, xscale: str = "linear"):
+    prefer = "linear" if xscale == "linear" else "log"
     # 0) NPZ 缓存最快
-    got = _load_hist_npz(rid)
+    got = _load_hist_npz(rid, prefer)
     if got is None:
-        # 1) 回退 txt（线性优先，其次 log）
-        got = _load_hist_txt_linear(rid) or _load_hist_txt_log(rid)
+        # 1) 回退 txt（先尝试 prefer，再尝试另一种）
+        if prefer == "linear":
+            got = _load_hist_txt_linear(rid) or _load_hist_txt_log(rid)
+        else:
+            got = _load_hist_txt_log(rid) or _load_hist_txt_linear(rid)
     if got is None:
         fig = go.Figure()
         fig.update_layout(
@@ -253,7 +279,13 @@ def _toggle_xlim_controls(mode):
     
 def get_mu_for_rid(rid: str, xscale: str = "linear"):
     """返回当前 rid 的 μ 数组（已按 xscale==log 时过滤 μ>0 并排序）"""
-    got = _load_hist_npz(rid) or _load_hist_txt_linear(rid) or _load_hist_txt_log(rid)
+    prefer = "linear" if xscale == "linear" else "log"
+    got = _load_hist_npz(rid, prefer)
+    if got is None:
+        if prefer == "linear":
+            got = _load_hist_txt_linear(rid) or _load_hist_txt_log(rid)
+        else:
+            got = _load_hist_txt_log(rid) or _load_hist_txt_linear(rid)
     if got is None:
         return None
     mu, cnt, src, src_path = got
@@ -323,7 +355,13 @@ def update_hist(hoverData, clickData, xscale, mode,
 
     # === 拟合叠加（可选，多方法） ===
     if isinstance(fit_methods, (list, tuple)) and fit_methods:
-        got = _load_hist_npz(rid) or _load_hist_txt_linear(rid) or _load_hist_txt_log(rid)
+        prefer = "linear" if xscale == "linear" else "log"
+        got = _load_hist_npz(rid, prefer)
+        if got is None:
+            if prefer == "linear":
+                got = _load_hist_txt_linear(rid) or _load_hist_txt_log(rid)
+            else:
+                got = _load_hist_txt_log(rid) or _load_hist_txt_linear(rid)
         if got is not None:
             mu_fit, cnt_fit, src, _ = got
 
