@@ -1,11 +1,16 @@
-"""Train the end-to-end model and plot comparisons for 20 samples."""
+"""Train the end-to-end model and plot comparisons for 20 random samples."""
 
 from __future__ import annotations
 
 import argparse
 import os
 
+import pytest
+
+pytest.skip("helper script, not a test", allow_module_level=True)
+
 import autograd.numpy as anp
+import numpy as np
 
 from .model import ConditionalMixtureModel, load_dataset, plot_comparison
 
@@ -18,13 +23,17 @@ def main() -> None:
     ap.add_argument("--maxiter", type=int, default=30, help="training iterations")
     args = ap.parse_args()
 
-    data = load_dataset(args.cache_dir, limit=args.limit)
+    data = load_dataset(args.cache_dir)
     if not data:
         raise RuntimeError("no data loaded; ensure cache directory is correct")
+    rng = np.random.default_rng()
+    n = min(args.limit, len(data))
+    idx = rng.choice(len(data), size=n, replace=False)
+    subset = [data[i] for i in idx]
 
     model = ConditionalMixtureModel(K=2)
-    model.fit(data, maxiter=args.maxiter)
-    plot_comparison(model, data, args.out)
+    model.fit(subset, maxiter=args.maxiter)
+    plot_comparison(model, subset, args.out)
     print(f"[OK] wrote comparison plot to {args.out}")
 
 

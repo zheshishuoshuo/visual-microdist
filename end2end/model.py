@@ -470,6 +470,8 @@ def plot_comparison(model: ConditionalMixtureModel, data: List[Dict[str, anp.nda
         ax2.plot(mu, cnt / N, color="C2", label="q")
         ax2.plot(mu, mdl_pdf * dmu, color="C3", label="p*Δμ")
         ax.set_xscale("log")
+        ax.set_yscale("linear")
+        ax2.set_yscale("linear")
         ax.set_title(rid)
     for ax in axes[n:]:
         ax.axis("off")
