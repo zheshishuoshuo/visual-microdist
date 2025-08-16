@@ -4,7 +4,7 @@ from tempfile import TemporaryDirectory
 import numpy as np
 import pandas as pd
 
-from ..end2end.stan_model import prepare_stan_data, pdf_mu, StanState
+from end2end.stan_model import prepare_stan_data, pdf_mu, StanState
 
 
 class FakeFit:
@@ -37,6 +37,17 @@ def _make_dataset(root: str) -> np.ndarray:
     np.savez(os.path.join(root, "hists", "0.npz"), logmu_mid=logmu, cnt_log=cnt)
     return df.loc[0, ["kappa", "gamma", "s"]].to_numpy()
 
+
+def test_prepare_stan_data_shapes() -> None:
+    with TemporaryDirectory() as d:
+        _make_dataset(d)
+        stan_data, aux = prepare_stan_data(d, K=3)
+
+        assert stan_data["cnt"].shape == (stan_data["I"], stan_data["J"])
+        assert stan_data["mu"].shape == (stan_data["J"],)
+        assert stan_data["B"].shape == (stan_data["I"], stan_data["P"])
+        assert aux["K"] == 3
+        assert aux["feat_mean"].shape == (stan_data["P"],)
 
 def test_pdf_mu_basic() -> None:
     with TemporaryDirectory() as d:
