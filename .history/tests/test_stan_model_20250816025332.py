@@ -4,7 +4,7 @@ from tempfile import TemporaryDirectory
 import numpy as np
 import pandas as pd
 
-from ..end2end.stan_model import prepare_stan_data, pdf_mu, StanState
+from end2end.stan_model import prepare_stan_data, pdf_mu, StanState
 
 
 class FakeFit:
